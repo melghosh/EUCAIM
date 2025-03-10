@@ -18,20 +18,21 @@
                                            <http://purl.org/dc/elements/1.1/creator> "LIMICS" ;
                                            <http://purl.org/dc/elements/1.1/language> "English" ;
                                            <http://purl.org/dc/elements/1.1/publisher> "EUCAIM" ;
+                                           <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by/4.0/"@en ;
                                            <http://purl.org/dc/elements/1.1/subject> """A Hyper-Ontology for semantic interoperability among heterogeneous healthcare common data standards/models in oncology.
 
 This effort is part of the EUCAM project 
 (https://cancerimage.eu/)""" ;
                                            <http://purl.org/dc/elements/1.1/title> "EUCAIM's Hyper-Ontology" ;
-                                           <http://purl.org/dc/terms/date> "January, 2025" ;
-                                           <http://purl.org/dc/terms/hasVersion> "1.2" ;
-                                           rdfs:comment """EUCAIM's Hyper-Ontology is a well-founded layered and modular domain and domain-application ontology that defines the essentials of oncology and radiology.
+                                           <http://purl.org/dc/terms/abstract> """EUCAIM's Hyper-Ontology is a well-founded layered and modular domain and domain-application ontology that defines the essentials of oncology and radiology.
 
 The Hyper-Ontology is developed using a hybrid iterative semantically and formally well-founded approach composed of two main strategies: bottom-up (based on the domain-specific knowledge provided by AI4HI: ProCAncer-I, INCISIVE, CHAIMELEON, and EuCanImage) and top-down (based on the mCODE specificationsl).
 
-Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, colon, liver, rectum, lung, and colorectal. In version 1.2, the min-FIF (minimum data Federation and Interoperbility Framework - Deliverable 5.6) is supported by specifying the minimum clinical and imaging metadata and query criteria and the associated semantic interactions and mappings.
-
->> We note that the Hyper-Ontology URI is symbolic for the moment.""" ;
+Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, colon, liver, rectum, lung, and colorectal. In version 1.2, the min-FIF (minimum data Federation and Interoperbility Framework - Deliverable 5.6) is supported by specifying the minimum clinical and imaging metadata and query criteria and the associated semantic interactions and mappings."""@en ;
+                                           <http://purl.org/dc/terms/bibliographicCitation> "El Ghosh M., Kalokyri V., Sambres M. Vaterkowski M., Duclos C., Tannier X., Tsakou G., Tsiknakis M., Daniel C. and Dhombres F. Towards Semantic Interoperability Among Heterogeneous Cancer Data Models Using a Layered Modular Hyper-Ontology. Formal Ontology in Information Systems (FOIS), vol. 394, pp.179 - 192. 2024. doi:10.3233/FAIA241305"@en ;
+                                           <http://purl.org/dc/terms/hasVersion> "1.2" ;
+                                           <http://purl.org/dc/terms/issued> "January 2025"@en ;
+                                           <http://schema.org/funding> "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/org-details/999999999/project/101100633/program/43152860/details"@en ;
                                            owl:versionInfo 1.2 .
 
 #################################################################
@@ -74,12 +75,28 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/date
 <http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/hasVersion
 <http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/funding
+<http://schema.org/funding> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
