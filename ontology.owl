@@ -1079,6 +1079,16 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasCollectionMethod -->
+
+
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasCollectionMethod">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
+        <skos:prefLabel xml:lang="en">hasCollectionMethod</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasCondition -->
 
 
@@ -1204,6 +1214,16 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 
     <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#inheresIn">
         <skos:prefLabel>Inheres In</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#interoperabilityLevel -->
+
+
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#interoperabilityLevel">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000008"/>
+        <skos:prefLabel xml:lang="en">interoperabilityLevel</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -78103,6 +78123,7 @@ Source:DICOM</rdfs:comment>
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000008">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000001"/>
         <rdfs:label>Interoperability level</rdfs:label>
+        <skos:prefLabel>Interoperability Tiers</skos:prefLabel>
     </owl:Class>
     
 
