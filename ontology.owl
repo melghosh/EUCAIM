@@ -10,7 +10,6 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:EUCAIM="https://cancerimage.eu/ontology/EUCAIM#"
-     xmlns:schema="http://schema.org/"
      xmlns:ontologies="http://bioontology.org/projects/ontologies/">
     <owl:Ontology rdf:about="https://cancerimage.eu/ontology/EUCAIM#">
         <dc:contributor>APHP</dc:contributor>
@@ -24,23 +23,23 @@
         <dc:creator>LIMICS</dc:creator>
         <dc:language>English</dc:language>
         <dc:publisher>EUCAIM</dc:publisher>
-        <dc:rights xml:lang="en">https://creativecommons.org/licenses/by/4.0/</dc:rights>
+        <dc:publisher>LIMICS</dc:publisher>
+        <dc:rights>https://creativecommons.org/licenses/by/4.0/</dc:rights>
         <dc:subject>A Hyper-Ontology for semantic interoperability among heterogeneous healthcare common data standards/models in oncology.
 
 This effort is part of the EUCAM project 
 (https://cancerimage.eu/)</dc:subject>
         <dc:title>EUCAIM&apos;s Hyper-Ontology</dc:title>
-        <terms:abstract xml:lang="en">EUCAIM&apos;s Hyper-Ontology is a well-founded layered and modular domain and domain-application ontology that defines the essentials of oncology and radiology.
+        <terms:bibliographicCitation xml:lang="en">El Ghosh M., Kalokyri V., Sambres M. Vaterkowski M., Duclos C., Tannier X., Tsakou G., Tsiknakis M., Daniel C. and Dhombres F. Towards Semantic Interoperability Among Heterogeneous Cancer Data Models Using a Layered Modular Hyper-Ontology. Formal Ontology in Information Systems (FOIS), vol. 394, pp.179 - 192. 2024. doi:10.3233/FAIA241305</terms:bibliographicCitation>
+        <terms:bibliographicCitation xml:lang="en">Laboratory of Medical Informatics and Knowledge Engineering in e-Health (LIMICS). (2025). EUCAIM&apos;s Hyper-Ontology_V1.3. Zenodo. https://doi.org/10.5281/zenodo.14765570</terms:bibliographicCitation>
+        <terms:date xml:lang="en">May, 2025</terms:date>
+        <rdfs:comment>EUCAIM&apos;s Hyper-Ontology is a well-founded layered and modular domain and domain-application ontology that defines the essentials of oncology and radiology.
 
 The Hyper-Ontology is developed using a hybrid iterative semantically and formally well-founded approach composed of two main strategies: bottom-up (based on the domain-specific knowledge provided by AI4HI: ProCAncer-I, INCISIVE, CHAIMELEON, and EuCanImage) and top-down (based on the mCODE specificationsl).
 
-Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, colon, liver, rectum, lung, and colorectal. In version 1.2, the min-FIF (minimum data Federation and Interoperbility Framework - Deliverable 5.6) is supported by specifying the minimum clinical and imaging metadata and query criteria and the associated semantic interactions and mappings.</terms:abstract>
-        <terms:bibliographicCitation xml:lang="en">El Ghosh M., Kalokyri V., Sambres M. Vaterkowski M., Duclos C., Tannier X., Tsakou G., Tsiknakis M., Daniel C. and Dhombres F. Towards Semantic Interoperability Among Heterogeneous Cancer Data Models Using a Layered Modular Hyper-Ontology. Formal Ontology in Information Systems (FOIS), vol. 394, pp.179 - 192. 2024. doi:10.3233/FAIA241305</terms:bibliographicCitation>
-        <terms:bibliographicCitation xml:lang="en">Laboratory of Medical Informatics and Knowledge Engineering in e-Health (LIMICS). (2025). EUCAIM&apos;s Hyper-Ontology_V1.2. Zenodo. https://doi.org/10.5281/zenodo.14765570</terms:bibliographicCitation>
-        <terms:hasVersion>1.2</terms:hasVersion>
-        <terms:issued xml:lang="en">January 2025</terms:issued>
-        <schema:funding xml:lang="en">https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/org-details/999999999/project/101100633/program/43152860/details</schema:funding>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</owl:versionInfo>
+Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, colon, liver, rectum, lung, and colorectal. In version 1.2, the min-FIF (minimum data Federation and Interoperbility Framework - Deliverable 5.6) is supported by specifying the minimum clinical and imaging metadata and query criteria and the associated semantic interactions and mappings.</rdfs:comment>
+        <owl:priorVersion>1.2 (January 2025)</owl:priorVersion>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -120,13 +119,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
-    <!-- http://purl.org/dc/terms/abstract -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
-    
-
-
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
 
 
@@ -138,27 +130,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/hasVersion -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/issued -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
-
-
-    <!-- http://schema.org/funding -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/funding"/>
     
 
 
@@ -521,6 +492,7 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 
 
     <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#HasAssociatedMorphology">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#Morphology"/>
         <skos:prefLabel>Has associated morphology</skos:prefLabel>
         <source>SNOMEDCT</source>
     </owl:ObjectProperty>
@@ -1089,21 +1061,29 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasBirthSex -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasBirthSex"/>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasBirthSex">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001396"/>
+        <skos:prefLabel xml:lang="en">hasBirthSex</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasBodySite -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasBodySite"/>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasBodySite">
+        <skos:prefLabel xml:lang="en">hasBodySite</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasEquipmentManufacturer -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasEquipmentManufacturer"/>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasEquipmentManufacturer">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
+        <skos:prefLabel xml:lang="en">hasEquipmentManufacturer</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
@@ -1120,21 +1100,29 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasHistology -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasHistology"/>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasHistology">
+        <skos:prefLabel xml:lang="en">hasHistology</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasImageBodyPart -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasImageBodyPart"/>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasImageBodyPart">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000024"/>
+        <skos:prefLabel xml:lang="en">hasImageBodyPart</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasImageModality -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasImageModality"/>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasImageModality">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000009"/>
+        <skos:prefLabel xml:lang="en">hasImageModality</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
@@ -1159,14 +1147,18 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasLocation -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasLocation"/>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasLocation">
+        <skos:prefLabel xml:lang="en">hasLocation</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasPathologyConfirmation -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasPathologyConfirmation"/>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasPathologyConfirmation">
+        <skos:prefLabel xml:lang="en">hasPathologyConfirmation</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
@@ -1512,7 +1504,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <skos:exactMatch>ICDO3:C17</skos:exactMatch>
         <skos:exactMatch>NCIT:C12386</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID132</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:30315005</skos:exactMatch>
         <skos:exactMatch>UMLS:C0021852</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Small intestine</skos:prefLabel>
         <ICDO3>C17</ICDO3>
@@ -1526,7 +1517,7 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <RadLex>RID132</RadLex>
         <SNOMEDCT>30315005</SNOMEDCT>
         <UMLS>C0021852</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:30315005</source>
     </owl:Class>
     
 
@@ -1549,7 +1540,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <skos:definition>For oncology, an area of the body generally construed to comprise the base of skull and facial bones, sinuses, orbits, salivary glands, oral cavity, oropharynx, larynx, thyroid, facial and neck musculature and lymph nodes draining these areas. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C12418</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID50615</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:774007</skos:exactMatch>
         <skos:exactMatch>UMLS:C0460004</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Head and neck</skos:prefLabel>
         <NCIT>C12418</NCIT>
@@ -1562,7 +1552,7 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <RadLex>RID50615</RadLex>
         <SNOMEDCT>774007</SNOMEDCT>
         <UMLS>C0460004</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:774007</source>
         <synonym xml:lang="en">Head and Neck structure</synonym>
     </owl:Class>
     
@@ -1919,14 +1909,13 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <skos:definition>The structure found below the ankle joint. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C32622</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID28829</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:56459004</skos:exactMatch>
         <skos:exactMatch>UMLS:C0016504</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Foot</skos:prefLabel>
         <NCIT>C32622</NCIT>
         <RadLex>RID28829</RadLex>
         <SNOMEDCT>56459004</SNOMEDCT>
         <UMLS>C0016504</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:56459004</source>
     </owl:Class>
     
 
@@ -1940,6 +1929,7 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000193"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000222"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000251"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000265"/>
         <rdfs:label xml:lang="en">Prostate</rdfs:label>
         <skos:altLabel>Prostatic structure</skos:altLabel>
         <skos:altLabel>Prostatic structure (body structure)</skos:altLabel>
@@ -1958,8 +1948,8 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <RadLex>RID343</RadLex>
         <SNOMEDCT>41216001</SNOMEDCT>
         <UMLS>C0033572</UMLS>
-        <source>Metadata Catalog</source>
-        <source>SNOMEDCT:41216001</source>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
+        <source>ICDO3:C61</source>
     </owl:Class>
     
 
@@ -1988,7 +1978,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>69548008</SNOMEDCT>
         <UMLS>C0229964</UMLS>
-        <source>Metadata Catalog</source>
         <source>SNOMEDCT:69548008</source>
     </owl:Class>
     
@@ -2485,8 +2474,8 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <rdfs:label>Prostate gland</rdfs:label>
         <skos:altLabel>Prostatic gland structure</skos:altLabel>
         <skos:altLabel>Prostatic gland structure (body structure)</skos:altLabel>
-        <skos:exactMatch>ICDO3:C61.9</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID38819</skos:exactMatch>
+        <skos:exactMatch>SNOMEDCT:279689003</skos:exactMatch>
         <skos:exactMatch>UMLS:C0033572</skos:exactMatch>
         <skos:prefLabel>Prostate gland</skos:prefLabel>
         <ICDO3>C61.9</ICDO3>
@@ -2499,7 +2488,8 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <RadLex>RID38819</RadLex>
         <SNOMEDCT>279689003</SNOMEDCT>
         <UMLS>C0033572</UMLS>
-        <source>SNOMEDCT:279689003</source>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
+        <source>ICDO3:C61.9</source>
     </owl:Class>
     
 
@@ -2576,14 +2566,13 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <skos:definition>The region of the body between the neck and the upper arm. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C25203</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID39518</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:16982005</skos:exactMatch>
         <skos:exactMatch>UMLS:C0037004</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Shoulder</skos:prefLabel>
         <NCIT>C25203</NCIT>
         <RadLex>RID39518</RadLex>
         <SNOMEDCT>16982005</SNOMEDCT>
         <UMLS>C0037004</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:16982005</source>
     </owl:Class>
     
 
@@ -2632,7 +2621,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <skos:definition>The parts of the urinary system that discharge urine. These include the renal pelvis, ureter, bladder, and urethra. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C191741</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID204</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:122489005</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Urinary tract</skos:prefLabel>
         <NCIT>C191741</NCIT>
         <OMOP_Concept_Class_ID>Body Structure</OMOP_Concept_Class_ID>
@@ -2643,7 +2631,7 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <RadLex>RID204</RadLex>
         <SNOMEDCT>122489005</SNOMEDCT>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:122489005</source>
     </owl:Class>
     
 
@@ -2844,6 +2832,7 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#BP1000051">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000001"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000003"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000265"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
@@ -2862,6 +2851,7 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <skos:exactMatch>SNOMEDCT:12738006</skos:exactMatch>
         <skos:exactMatch>UMLS:C0006104</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Brain</skos:prefLabel>
+        <ICDO3>C71</ICDO3>
         <NCIT>C12439</NCIT>
         <OMOP_Concept_Class_ID>ICDO Topography</OMOP_Concept_Class_ID>
         <OMOP_Concept_ID>44497944</OMOP_Concept_ID>
@@ -2872,7 +2862,8 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <RadLex>RID6434</RadLex>
         <SNOMEDCT>12738006</SNOMEDCT>
         <UMLS>C0006104</UMLS>
-        <source>Metadata Catalog</source>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
+        <source>ICDO3:C71</source>
     </owl:Class>
     
 
@@ -3264,14 +3255,13 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
         <skos:definition>Those vertebrae between the ribs and the pelvis, L1-L5 in man. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C69314</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID34573</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:122496007</skos:exactMatch>
         <skos:exactMatch>UMLS:C3887615</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Lumbar spine</skos:prefLabel>
         <NCIT>C69314</NCIT>
         <RadLex>RID34573</RadLex>
         <SNOMEDCT>122496007</SNOMEDCT>
         <UMLS>C3887615</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:122496007</source>
         <synonym xml:lang="en"> 
 Lumbar vertebral column</synonym>
     </owl:Class>
@@ -3356,7 +3346,6 @@ Lumbar vertebral column</synonym>
         <skos:definition>The anterior side of the thorax from the neck to the abdomen. The shape of the chest is often regarded as potential insight into a disease process, as in the case of barrel chest and respiratory dysfunction. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C25389</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID1243</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:51185008</skos:exactMatch>
         <skos:exactMatch>UMLS:C0817096</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Chest</skos:prefLabel>
         <LOINC>LP7138-3</LOINC>
@@ -3370,7 +3359,7 @@ Lumbar vertebral column</synonym>
         <RadLex>RID1243</RadLex>
         <SNOMEDCT>51185008</SNOMEDCT>
         <UMLS>C0817096</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:51185008</source>
         <synonym xml:lang="en">Thorax</synonym>
     </owl:Class>
     
@@ -3583,6 +3572,7 @@ Lumbar vertebral column</synonym>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000025"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000056"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000232"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000265"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
@@ -3611,7 +3601,7 @@ Lumbar vertebral column</synonym>
         <RadLex>RID1385</RadLex>
         <SNOMEDCT>80891009</SNOMEDCT>
         <UMLS>C0018787</UMLS>
-        <source>Metadata Catalog</source>
+        <source>ICDO3:C38.0</source>
     </owl:Class>
     
 
@@ -3664,14 +3654,13 @@ Lumbar vertebral column</synonym>
         <skos:definition>The spinal or vertebral column. [MeSH]</skos:definition>
         <skos:exactMatch>NCIT:C12998</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID7741</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:421060004</skos:exactMatch>
         <skos:exactMatch>UMLS:C0037949</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Spine</skos:prefLabel>
         <NCIT>C12998</NCIT>
         <RadLex>RID7741</RadLex>
         <SNOMEDCT>421060004</SNOMEDCT>
         <UMLS>C0037949</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:421060004</source>
         <synonym xml:lang="en">Structure of vertebral column</synonym>
     </owl:Class>
     
@@ -3887,7 +3876,6 @@ Lumbar vertebral column</synonym>
         <skos:altLabel>glandula suprarenalis</skos:altLabel>
         <skos:definition>A flattened, roughly triangular body resting upon the upper end of each kidney; it is one of the ductless glands furnishing internal secretions (epinephrine and norepinephrine from the medulla and steroid hormones from the cortex). [NCIT]</skos:definition>
         <skos:definition>A pair of glands located at the cranial pole of each of the two kidneys. Each adrenal gland is composed of two distinct endocrine tissues with separate embryonic origins, the adrenal cortex producing steroids and the adrenal medulla producing neurotransmitters. [MeSH]</skos:definition>
-        <skos:exactMatch>ICDO3:C74</skos:exactMatch>
         <skos:exactMatch>NCIT:C12666</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID88</skos:exactMatch>
         <skos:exactMatch>SNOMEDCT:23451007</skos:exactMatch>
@@ -3904,7 +3892,7 @@ Lumbar vertebral column</synonym>
         <RadLex>RID88</RadLex>
         <SNOMEDCT>23451007</SNOMEDCT>
         <UMLS>C0001625</UMLS>
-        <source>Metadata Catalog</source>
+        <source>ICDO3:C74</source>
     </owl:Class>
     
 
@@ -3926,14 +3914,13 @@ Lumbar vertebral column</synonym>
         <skos:definition>Organ with organ cavity which is continuous proximally with the right and left uterine tubes and distally is connected to the vagina.  {FMA]</skos:definition>
         <skos:exactMatch>NCIT:C12405</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID302</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:35039007</skos:exactMatch>
         <skos:exactMatch>UMLS:C0042149</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Uterus</skos:prefLabel>
         <NCIT>C12405</NCIT>
         <RadLex>RID302</RadLex>
         <SNOMEDCT>35039007</SNOMEDCT>
         <UMLS>C0042149</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:35039007</source>
     </owl:Class>
     
 
@@ -4147,7 +4134,6 @@ Lumbar vertebral column</synonym>
         <skos:definition>This structure, also termed the pelvic region, includes the wall, cavity and content of both the true and false pelvis; it consequently incorporates the entire bony pelvis; and inferiorly it is bounded and includes the pelvic diaphragm. The structure incorporates the complete pelvic wall; sacrococcygeal region (including the overlying skin and subcutaneous tissue); the contents of the false pelvic cavity; but in contrast to the &apos;pelvic segment of trunk&apos; excludes the perineum, external genitalia. [SNOMEDCT]</skos:definition>
         <skos:exactMatch>NCIT:C12767</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID2507</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:12921003</skos:exactMatch>
         <skos:exactMatch>UMLS:C0030797</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Pelvis</skos:prefLabel>
         <LOINC>LP7467-6</LOINC>
@@ -4161,7 +4147,7 @@ Lumbar vertebral column</synonym>
         <RadLex>RID2507</RadLex>
         <SNOMEDCT>12921003</SNOMEDCT>
         <UMLS>C0030797</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:12921003</source>
         <synonym xml:lang="en">Pelvic region</synonym>
     </owl:Class>
     
@@ -4583,7 +4569,6 @@ Lumbar vertebral column</synonym>
         <RadLex>RID58</RadLex>
         <SNOMEDCT>10200004</SNOMEDCT>
         <UMLS>C0023884</UMLS>
-        <source>Metadata Catalog</source>
         <source>SNOMEDCT:10200004</source>
     </owl:Class>
     
@@ -4633,7 +4618,6 @@ Lumbar vertebral column</synonym>
         <skos:definition>An anatomic site along the midline and under the sternum that contains the heart and pericardium, the bases of the great vessels, the trachea and bronchi, esophagus, thymus, lymph nodes, thoracic duct, phrenic and vagus nerves, and other structures and tissues. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C12748</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID1384</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:72410000</skos:exactMatch>
         <skos:exactMatch>UMLS:C0025066</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Mediastinum</skos:prefLabel>
         <LOINC>LP191618-0</LOINC>
@@ -4641,7 +4625,7 @@ Lumbar vertebral column</synonym>
         <RadLex>RID1384</RadLex>
         <SNOMEDCT>72410000</SNOMEDCT>
         <UMLS>C0025066</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:72410000</source>
     </owl:Class>
     
 
@@ -4794,14 +4778,13 @@ Lumbar vertebral column</synonym>
         <skos:definition>The body part defined by the knee joint and its surrounding structures</skos:definition>
         <skos:exactMatch>NCIT:C32898</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID2743</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:72696002</skos:exactMatch>
         <skos:exactMatch>UMLS:C1963703</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Knee</skos:prefLabel>
         <NCIT>C32898</NCIT>
         <RadLex>RID2743</RadLex>
         <SNOMEDCT>72696002</SNOMEDCT>
         <UMLS>C1963703</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:72696002</source>
     </owl:Class>
     
 
@@ -4830,14 +4813,13 @@ Lumbar vertebral column</synonym>
         <skos:definition>One of a pair of viscera occupying the pulmonary cavities of the thorax, the organs of respiration in which aeration of the blood takes place. As a rule, the right lung is slightly larger than the left and is divided into three lobes (an upper, a middle, and a lower or basal), while the left has two lobes (an upper and a lower or basal). Each lung is irregularly conical in shape, presenting a blunt upper extremity (the apex), a concave base following the curve of the diaphragm, an outer convex surface (costal surface), an inner or mediastinal surface (mediastinal surface), a thin and sharp anterior border, and a thick and rounded posterior border. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C12468</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID1301</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:39607008</skos:exactMatch>
         <skos:exactMatch>UMLS:C0024109</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Lung structure</skos:prefLabel>
         <NCIT>C12468</NCIT>
         <RadLex>RID1301</RadLex>
         <SNOMEDCT>39607008</SNOMEDCT>
         <UMLS>C0024109</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:39607008</source>
     </owl:Class>
     
 
@@ -5033,14 +5015,13 @@ Lumbar vertebral column</synonym>
         <skos:definition>The anterior and superior part of a human bearing the mouth, the brain and sensory organs. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C12419</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID9080</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:69536005</skos:exactMatch>
         <skos:exactMatch>UMLS:C0018670</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Head</skos:prefLabel>
         <NCIT>C12419</NCIT>
         <RadLex>RID9080</RadLex>
         <SNOMEDCT>69536005</SNOMEDCT>
         <UMLS>C0018670</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:69536005</source>
     </owl:Class>
     
 
@@ -5058,14 +5039,13 @@ Lumbar vertebral column</synonym>
         <skos:definition>The region that connects the head to the rest of the body. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C13063</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID7488</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:45048000</skos:exactMatch>
         <skos:exactMatch>UMLS:C0027530</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Neck</skos:prefLabel>
         <NCIT>C13063</NCIT>
         <RadLex>RID7488</RadLex>
         <SNOMEDCT>45048000</SNOMEDCT>
         <UMLS>C0027530</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:45048000</source>
     </owl:Class>
     
 
@@ -5353,7 +5333,6 @@ Lumbar vertebral column</synonym>
         <RadLex>RID163</RadLex>
         <SNOMEDCT>34402009</SNOMEDCT>
         <UMLS>C0034896</UMLS>
-        <source>Metadata Catalog</source>
         <source>SNOMEDCT:34402009</source>
     </owl:Class>
     
@@ -5488,7 +5467,6 @@ Lumbar vertebral column</synonym>
         <skos:definition>The skeleton of the head including the facial bones and the bones enclosing the brain. [MeSH]</skos:definition>
         <skos:exactMatch>NCIT:C12789</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID9196</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:89546000</skos:exactMatch>
         <skos:exactMatch>UMLS:C0037303</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Skull</skos:prefLabel>
         <NCIT>C12789</NCIT>
@@ -5501,7 +5479,7 @@ Lumbar vertebral column</synonym>
         <RadLex>RID9196</RadLex>
         <SNOMEDCT>89546000</SNOMEDCT>
         <UMLS>C0037303</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:89546000</source>
     </owl:Class>
     
 
@@ -5557,7 +5535,6 @@ Lumbar vertebral column</synonym>
         <RadLex>RID28749</RadLex>
         <SNOMEDCT>76752008</SNOMEDCT>
         <UMLS>C0006141</UMLS>
-        <source>Metadata Catalog</source>
         <source>SNOMEDCT:76752008</source>
     </owl:Class>
     
@@ -5725,6 +5702,7 @@ Lumbar vertebral column</synonym>
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#BP1000142">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000030"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000184"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000265"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
@@ -5741,7 +5719,6 @@ Lumbar vertebral column</synonym>
         <skos:altLabel>vesica fellea</skos:altLabel>
         <skos:definition>A pear-shaped organ located under the liver that stores and concentrates bile secreted by the liver. From the gallbladder the bile is delivered through the bile ducts into the intestine thereby aiding the digestion of fat-containing foods. [NCIT]</skos:definition>
         <skos:definition>Organ with organ cavity which is continuous proximally with the cystic duct and distally terminates in the fundus of the gallbladder.  [FMA]</skos:definition>
-        <skos:exactMatch>ICDO3:C23</skos:exactMatch>
         <skos:exactMatch>NCIT:C12377</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID187</skos:exactMatch>
         <skos:exactMatch>SNOMEDCT:28231008</skos:exactMatch>
@@ -5758,7 +5735,7 @@ Lumbar vertebral column</synonym>
         <RadLex>RID187</RadLex>
         <SNOMEDCT>28231008</SNOMEDCT>
         <UMLS>C0016976</UMLS>
-        <source>Metadata Catalog</source>
+        <source>ICDO3:C23</source>
     </owl:Class>
     
 
@@ -5778,14 +5755,13 @@ Lumbar vertebral column</synonym>
         <skos:definition>The major arterial trunk that carries oxygenated blood from the left ventricle into the ascending aorta behind the heart, the aortic arch, through the thorax as the descending aorta and through the abdomen as the abdominal aorta; it bifurcates into the left and right common iliac arteries. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C12669</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID480</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:15825003</skos:exactMatch>
         <skos:exactMatch>UMLS:C0003483</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Aorta</skos:prefLabel>
         <NCIT>C12669</NCIT>
         <RadLex>RID480</RadLex>
         <SNOMEDCT>15825003</SNOMEDCT>
         <UMLS>C0003483</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:15825003</source>
     </owl:Class>
     
 
@@ -6002,6 +5978,7 @@ Lumbar vertebral column</synonym>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000117"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000147"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000205"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000298"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
@@ -6020,7 +5997,6 @@ Lumbar vertebral column</synonym>
         <skos:definition>One of the two bean-shaped organs located on each side of the spine in the retroperitoneum. The right kidney is located below the liver and the left kidney below the diaphragm. The kidneys filter and secrete metabolic products and minerals from the blood, thus maintaining homeostasis. On the superior pole of each kidney there is an adrenal gland. Each kidney and adrenal gland is surrounded by fat. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C12415</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID205</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:64033007</skos:exactMatch>
         <skos:exactMatch>UMLS:C0022646</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Kidney structure</skos:prefLabel>
         <NCIT>C12415</NCIT>
@@ -6033,7 +6009,7 @@ Lumbar vertebral column</synonym>
         <RadLex>RID205</RadLex>
         <SNOMEDCT>64033007</SNOMEDCT>
         <UMLS>C0022646</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:64033007</source>
     </owl:Class>
     
 
@@ -6115,7 +6091,6 @@ Lumbar vertebral column</synonym>
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>416775004</SNOMEDCT>
         <UMLS>C1562547</UMLS>
-        <source>Metadata Catalog</source>
         <source>SNOMEDCT:416775004</source>
     </owl:Class>
     
@@ -6313,7 +6288,6 @@ Lumbar vertebral column</synonym>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Pelvis and lower extremities</rdfs:label>
-        <skos:exactMatch>SNOMEDCT:416631005</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Pelvis and lower extremities</skos:prefLabel>
         <OMOP_Concept_Class_ID>Body Structure</OMOP_Concept_Class_ID>
         <OMOP_Concept_ID>4219713</OMOP_Concept_ID>
@@ -6322,7 +6296,7 @@ Lumbar vertebral column</synonym>
         <OMOP_Domain_ID>Spec Anatomic Site</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>416631005</SNOMEDCT>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:416631005</source>
     </owl:Class>
     
 
@@ -6371,14 +6345,13 @@ Lumbar vertebral column</synonym>
         <skos:definition>The hearing and equilibrium system of the body. It consists of three parts: the external ear, the middle ear, and the inner ear. Sound waves are transmitted through this organ where vibration is transduced to nerve signals that pass through the acoustic nerve to the central nervous system. The inner ear also contains the vestibular organ that maintains equilibrium by transducing signals to the vestibular nerve. [MeSH]</skos:definition>
         <skos:exactMatch>NCIT:C12394</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID10053</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:117590005</skos:exactMatch>
         <skos:exactMatch>UMLS:C0013443</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Ear</skos:prefLabel>
         <NCIT>C12394</NCIT>
         <RadLex>RID10053</RadLex>
         <SNOMEDCT>117590005</SNOMEDCT>
         <UMLS>C0013443</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:117590005</source>
     </owl:Class>
     
 
@@ -6627,7 +6600,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:definition>A body region referring to an upper or lower extremity. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C12429</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID13202</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:66019005</skos:exactMatch>
         <skos:exactMatch>UMLS:C0015385</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Extremity</skos:prefLabel>
         <NCIT>C12429</NCIT>
@@ -6640,7 +6612,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <RadLex>RID13202</RadLex>
         <SNOMEDCT>66019005</SNOMEDCT>
         <UMLS>C0015385</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:66019005</source>
         <synonym xml:lang="en">Limb structure</synonym>
     </owl:Class>
     
@@ -6700,7 +6672,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:definition>This is considered the most commonly used clinical variant of &apos;abdomen&apos; and relates to the space and content within the abdominopelvic cavity plus the anterior and lateral abdominal wall. The volume is bounded by, but excludes: superiorly the thoracic diaphragm; inferiorly the pelvic diaphragm; and posteriorly the posterior wall of the abdomen proper: The pelvic component consists of the cavity of the true pelvis, which is bounded by, but excludes, the pelvic wall. Anteriorly this volume is bounded and includes the anterior abdominal (including the lateral abdominal wall). [SNOMEDCT]</skos:definition>
         <skos:exactMatch>NCIT:C12664</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID56</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:818983003</skos:exactMatch>
         <skos:exactMatch>UMLS:C0000726</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Abdomen</skos:prefLabel>
         <NCIT>C12664</NCIT>
@@ -6713,7 +6684,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <RadLex>RID56</RadLex>
         <SNOMEDCT>818983003</SNOMEDCT>
         <UMLS>C0000726</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:818983003</source>
     </owl:Class>
     
 
@@ -6994,7 +6965,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:label xml:lang="en">Chest and abdomen</rdfs:label>
         <skos:altLabel>Chest and/or abdomen structure</skos:altLabel>
         <skos:altLabel>Chest and/or abdomen structure (body structure)</skos:altLabel>
-        <skos:exactMatch>SNOMEDCT:416550000</skos:exactMatch>
         <skos:exactMatch>UMLS:C1442171</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Chest and abdomen</skos:prefLabel>
         <OMOP_Concept_Class_ID>Body Structure</OMOP_Concept_Class_ID>
@@ -7005,7 +6975,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>416550000</SNOMEDCT>
         <UMLS>C1442171</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:416550000</source>
     </owl:Class>
     
 
@@ -7324,14 +7294,13 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:definition>The vertebrae of the thoracic spine, numbered one through twelve in man. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C69315</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID34572</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:122495006</skos:exactMatch>
         <skos:exactMatch>UMLS:C0581269</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Thoracic spine</skos:prefLabel>
         <NCIT>C69315</NCIT>
         <RadLex>RID34572</RadLex>
         <SNOMEDCT>122495006</SNOMEDCT>
         <UMLS>C0581269</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:122495006</source>
     </owl:Class>
     
 
@@ -7503,13 +7472,12 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:altLabel>Optic canal structure (body structure)</skos:altLabel>
         <skos:altLabel>Optic foramen</skos:altLabel>
         <skos:exactMatch>RADLEX:RID9298</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:55024004</skos:exactMatch>
         <skos:exactMatch>UMLS:C0450102</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Optic canal</skos:prefLabel>
         <RadLex>RID9298</RadLex>
         <SNOMEDCT>55024004</SNOMEDCT>
         <UMLS>C0450102</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:55024004</source>
     </owl:Class>
     
 
@@ -7639,7 +7607,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>416152001</SNOMEDCT>
         <UMLS>C1562378</UMLS>
-        <source>Metadata Catalog</source>
         <source>SNOMEDCT:416152001</source>
     </owl:Class>
     
@@ -7774,6 +7741,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000045"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000114"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000242"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000265"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
@@ -7801,7 +7769,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <RadLex>RID170</RadLex>
         <SNOMEDCT>15776009</SNOMEDCT>
         <UMLS>C0030274</UMLS>
-        <source>Metadata Catalog</source>
+        <source>ICDO3:C25</source>
     </owl:Class>
     
 
@@ -7839,22 +7807,14 @@ The term “central gland” refers to the central zone and the transition zone 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#BP1000211">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000154"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000043"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label>Abdomen and Pelvis</rdfs:label>
         <skos:prefLabel>Abdomen and Pelvis</skos:prefLabel>
-        <LOINC>LP33481-0</LOINC>
-        <OMOP_Concept_Class_ID>LOINC System</OMOP_Concept_Class_ID>
-        <OMOP_Concept_ID>40776293</OMOP_Concept_ID>
+        <OMOP_Concept_ID>4220304</OMOP_Concept_ID>
         <OMOP_Concept_Name>Abdomen and Pelvis</OMOP_Concept_Name>
-        <OMOP_Concept_code>LP33481-0</OMOP_Concept_code>
-        <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
-        <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
-        <source>LOINC:LP33481-0</source>
+        <OMOP_Concept_code>416949008</OMOP_Concept_code>
+        <OMOP_Domain_ID>Spec Anatomic Site</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
+        <source>SNOMEDCT:416949008</source>
     </owl:Class>
     
 
@@ -8128,14 +8088,13 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:definition>Upper extremity, including shoulder, arm, forearm, wrist, and hand</skos:definition>
         <skos:exactMatch>NCIT:C32141</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID1968</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:53120007</skos:exactMatch>
         <skos:exactMatch>UMLS:C1140618</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Arm</skos:prefLabel>
         <NCIT>C32141</NCIT>
         <RadLex>RID1968</RadLex>
         <SNOMEDCT>53120007</SNOMEDCT>
         <UMLS>C1140618</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:53120007</source>
     </owl:Class>
     
 
@@ -8392,14 +8351,13 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:definition>A ball-and-socket joint between the head of the femur and the acetabulum. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C32742</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID2640</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:24136001</skos:exactMatch>
         <skos:exactMatch>UMLS:C0019558</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Hip joint</skos:prefLabel>
         <NCIT>C32742</NCIT>
         <RadLex>RID2640</RadLex>
         <SNOMEDCT>24136001</SNOMEDCT>
         <UMLS>C0019558</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:24136001</source>
     </owl:Class>
     
 
@@ -8508,7 +8466,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:label xml:lang="en">Neck and chest</rdfs:label>
         <skos:altLabel>Neck and/or chest structure</skos:altLabel>
         <skos:altLabel>Neck and/or chest structure (body structure)</skos:altLabel>
-        <skos:exactMatch>SNOMEDCT:417437006</skos:exactMatch>
         <skos:exactMatch>UMLS:C1562459</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Neck and chest</skos:prefLabel>
         <OMOP_Concept_Class_ID>Body Structure</OMOP_Concept_Class_ID>
@@ -8519,7 +8476,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>417437006</SNOMEDCT>
         <UMLS>C1562459</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:417437006</source>
     </owl:Class>
     
 
@@ -8708,14 +8665,13 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:definition>The set of vertebrae immediately caudal to the skull. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C69313</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID34571</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:122494005</skos:exactMatch>
         <skos:exactMatch>UMLS:C0728985</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Cervical spine</skos:prefLabel>
         <NCIT>C69313</NCIT>
         <RadLex>RID34571</RadLex>
         <SNOMEDCT>122494005</SNOMEDCT>
         <UMLS>C0728985</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:122494005</source>
     </owl:Class>
     
 
@@ -9243,7 +9199,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:exactMatch>ICDO3:C18</skos:exactMatch>
         <skos:exactMatch>NCIT:C12382</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID31011</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:71854001</skos:exactMatch>
         <skos:exactMatch>UMLS:C0009368</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Colon structure</skos:prefLabel>
         <ICDO3>C18</ICDO3>
@@ -9258,7 +9213,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <RadLex>RID31011</RadLex>
         <SNOMEDCT>71854001</SNOMEDCT>
         <UMLS>C0009368</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:71854001</source>
         <synonym xml:lang="en">Colon structure</synonym>
     </owl:Class>
     
@@ -9283,14 +9238,13 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:definition>The triangular bone, made up of 5 fused bones of the spine, located in the lower area of the spine between the fifth lumbar vertebra and the coccyx. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C33508</skos:exactMatch>
         <skos:exactMatch>RADLEX:RID2509</skos:exactMatch>
-        <skos:exactMatch>SNOMEDCT:699698002</skos:exactMatch>
         <skos:exactMatch>UMLS:C3669209</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Sacrum</skos:prefLabel>
         <NCIT>C33508</NCIT>
         <RadLex>RID2509</RadLex>
         <SNOMEDCT>699698002</SNOMEDCT>
         <UMLS>C3669209</UMLS>
-        <source>Metadata Catalog</source>
+        <source>SNOMEDCT:699698002</source>
     </owl:Class>
     
 
@@ -9362,6 +9316,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:prefLabel>Hepatic flexure of colon</skos:prefLabel>
         <CancerModifier>OMOP4998364</CancerModifier>
         <ICDO3>C18.3</ICDO3>
+        <source>ICDO3:C18.3</source>
     </owl:Class>
     
 
@@ -9376,6 +9331,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:prefLabel>Splenic flexure of colon</skos:prefLabel>
         <CancerModifier>OMOP5000296</CancerModifier>
         <ICDO3>C18.5</ICDO3>
+        <source>ICDO3:C18.5</source>
     </owl:Class>
     
 
@@ -9434,6 +9390,17 @@ The term “central gland” refers to the central zone and the transition zone 
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#BP1000267 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#BP1000267">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000116"/>
+        <rdfs:label>Female genital organ structure</rdfs:label>
+        <skos:prefLabel>Female genital organ structure</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#BP1000270 -->
 
 
@@ -9456,6 +9423,49 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Domain_ID>Spec Anatomic Site</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>ICDO3</OMOP_Vocabulary_ID>
         <source>ICDO3:C50.9</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#BP1000274 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#BP1000274">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000242"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000077"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Ovarian structure</rdfs:label>
+        <skos:altLabel>Ovarian structure (body structure)</skos:altLabel>
+        <skos:altLabel>Ovary</skos:altLabel>
+        <skos:prefLabel>Ovarian structure</skos:prefLabel>
+        <OMOP_Concept_Class_ID>Body Structure</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>4049448</OMOP_Concept_ID>
+        <OMOP_Concept_code>15497006</OMOP_Concept_code>
+        <OMOP_Domain_ID>Spec Anatomic Site</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
+        <SNOMEDCT>15497006</SNOMEDCT>
+        <source>SNOMEDCT:15497006</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#BP1000298 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#BP1000298">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000265"/>
+        <rdfs:label>Kidney</rdfs:label>
+        <skos:prefLabel>Kidney</skos:prefLabel>
+        <OMOP_Concept_Class_ID>ICDO Topography</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>44497908</OMOP_Concept_ID>
+        <OMOP_Concept_code>C64</OMOP_Concept_code>
+        <OMOP_Domain_ID>Spec Anatomic Site</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>ICDO3</OMOP_Vocabulary_ID>
+        <source>ICDO3:C64</source>
     </owl:Class>
     
 
@@ -9779,13 +9789,13 @@ The term “central gland” refers to the central zone and the transition zone 
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000257"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Malignant tumor of colon</rdfs:label>
+        <rdfs:label xml:lang="en">Malignant neoplasm of colon</rdfs:label>
         <skos:altLabel xml:lang="en">Colon cancer</skos:altLabel>
-        <skos:altLabel>Malignant neoplasm of colon</skos:altLabel>
+        <skos:altLabel>Malignant tumor of colon</skos:altLabel>
         <skos:definition>A malignant epithelial neoplasm that arises from the colon and invades through the muscularis mucosa into the submucosa.  The vast majority are adenocarcinomas. [NCIT]</skos:definition>
         <skos:exactMatch>NCIT:C4910</skos:exactMatch>
         <skos:exactMatch>SNOMEDCT:363406005</skos:exactMatch>
-        <skos:prefLabel xml:lang="en">Malignant tumor of colon</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Malignant neoplasm of colon</skos:prefLabel>
         <ICD10>C18</ICD10>
         <NCIT>C4910</NCIT>
         <OMOP_Concept_Class_ID>Clinical Finding</OMOP_Concept_Class_ID>
@@ -9891,7 +9901,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <NCIT>C4872</NCIT>
         <OMOP_Concept_Class_ID>Clinical Finding</OMOP_Concept_Class_ID>
         <OMOP_Concept_ID>4112853</OMOP_Concept_ID>
-        <OMOP_Concept_Name>Malignant tumor of breast</OMOP_Concept_Name>
+        <OMOP_Concept_Name>Malignant neoplasm of breast</OMOP_Concept_Name>
         <OMOP_Concept_code>254837009</OMOP_Concept_code>
         <OMOP_Domain_ID>Condition</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
@@ -10227,10 +10237,9 @@ The term “central gland” refers to the central zone and the transition zone 
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000105"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Liver cancer</rdfs:label>
-        <skos:altLabel xml:lang="en">Malignant neoplasm of liver</skos:altLabel>
+        <rdfs:label xml:lang="en">Malignant neoplasm of liver</rdfs:label>
+        <skos:altLabel xml:lang="en">Liver cancer</skos:altLabel>
         <skos:altLabel>CA - Liver cancer</skos:altLabel>
-        <skos:altLabel>Malignant neoplasm of liver</skos:altLabel>
         <skos:altLabel>Malignant neoplasm of liver (disorder)</skos:altLabel>
         <skos:altLabel>Malignant tumor of liver</skos:altLabel>
         <skos:altLabel>Malignant tumour of liver</skos:altLabel>
@@ -10238,7 +10247,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <skos:exactMatch>NCIT:C7927</skos:exactMatch>
         <skos:exactMatch>SNOMEDCT:93870000</skos:exactMatch>
         <skos:exactMatch>UMLS:C0345904</skos:exactMatch>
-        <skos:prefLabel xml:lang="en">Liver cancer</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Malignant neoplasm of liver</skos:prefLabel>
         <NCIT>C7927</NCIT>
         <OMOP_Concept_Class_ID>Clinical Finding</OMOP_Concept_Class_ID>
         <OMOP_Concept_ID>4246127</OMOP_Concept_ID>
@@ -14291,6 +14300,118 @@ The term “central gland” refers to the central zone and the transition zone 
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1003309 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1003309">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1010380"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000067"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Neoplasm of female genital organ</rdfs:label>
+        <skos:prefLabel>Neoplasm of female genital organ</skos:prefLabel>
+        <OMOP_Concept_Class_ID>Disorder</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>4131756</OMOP_Concept_ID>
+        <OMOP_Concept_Name>Neoplasm of female genital organ</OMOP_Concept_Name>
+        <OMOP_Concept_code>126907002</OMOP_Concept_code>
+        <OMOP_Domain_ID>Condition</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
+        <SNOMEDCT>126907002</SNOMEDCT>
+        <source>SNOMEDCT:126907002</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1003310 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1003310">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1003309"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000067"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Neoplasm of ovary</rdfs:label>
+        <skos:prefLabel>Neoplasm of ovary</skos:prefLabel>
+        <OMOP_Concept_Class_ID>Disorder</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>4047650</OMOP_Concept_ID>
+        <OMOP_Concept_Name>Neoplasm of ovary</OMOP_Concept_Name>
+        <OMOP_Concept_code>123843001</OMOP_Concept_code>
+        <OMOP_Domain_ID>Condition</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
+        <SNOMEDCT>123843001</SNOMEDCT>
+        <source>SNOMECT:123843001</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1003311 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1003311">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1003310"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1003312"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasAssociatedMorphology"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1049106"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000067"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasFindingSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000274"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Malignant neoplasm of ovary</rdfs:label>
+        <skos:altLabel>Malignant tumor of ovary</skos:altLabel>
+        <skos:exactMatch>SNOMEDCT:363443007</skos:exactMatch>
+        <skos:prefLabel>Malignant neoplasm of ovary</skos:prefLabel>
+        <OMOP_Concept_ID>45542614</OMOP_Concept_ID>
+        <OMOP_Concept_code>C56</OMOP_Concept_code>
+        <OMOP_Domain_ID>Condition</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>ICD10</OMOP_Vocabulary_ID>
+        <SNOMEDCT>363443007</SNOMEDCT>
+        <source>ICD10:C56</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1003312 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1003312">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1003309"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000067"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Malignant tumor of female genital organ</rdfs:label>
+        <skos:prefLabel>Malignant tumor of female genital organ</skos:prefLabel>
+        <OMOP_Concept_ID>4177244</OMOP_Concept_ID>
+        <OMOP_Concept_Name>Malignant tumor of female genital organ</OMOP_Concept_Name>
+        <OMOP_Concept_code>363514001</OMOP_Concept_code>
+        <OMOP_Domain_ID>Condition</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
+        <SNOMEDCT>363514001</SNOMEDCT>
+        <source>SNOMEDCT:363514001</source>
+    </owl:Class>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1003387 -->
 
 
@@ -15709,7 +15830,10 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1007978"/>
         <rdfs:label>Malignant neoplasm of brain</rdfs:label>
         <skos:prefLabel>Malignant neoplasm of brain</skos:prefLabel>
+        <ICD10>C71</ICD10>
         <SNOMEDCT>428061005</SNOMEDCT>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
+        <source>ICD10:C71</source>
         <source>SNOMEDCT:428061005</source>
     </owl:Class>
     
@@ -22905,7 +23029,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>853771000000105</SNOMEDCT>
         <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
-        <source>SNOMEDCT:8.53771E+14</source>
+        <source>SNOMEDCT:853771000000105</source>
     </owl:Class>
     
 
@@ -41727,7 +41851,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>47620003</SNOMEDCT>
         <UMLS>C0010633</UMLS>
-        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>SNOMEDCT:47620003</source>
     </owl:Class>
     
@@ -49940,7 +50063,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>1187375007</SNOMEDCT>
-        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>SNOMEDCT:1187375007</source>
     </owl:Class>
     
@@ -50792,6 +50914,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Domain_ID>Condition</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>363350007</SNOMEDCT>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>SNOMEDCT:363350007</source>
     </owl:Class>
     
@@ -53755,7 +53878,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
         <SNOMEDCT>70921007</SNOMEDCT>
-        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>SNOMEDCT:70921007</source>
     </owl:Class>
     
@@ -60866,6 +60988,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:label>Colon</rdfs:label>
         <skos:prefLabel>Colon</skos:prefLabel>
         <ICDO3>C18</ICDO3>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>ICDO3:C18</source>
     </owl:Class>
     
@@ -60879,6 +61002,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:label>Rectum</rdfs:label>
         <skos:prefLabel>Rectum</skos:prefLabel>
         <ICDO3>C20</ICDO3>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>ICDO3:C20</source>
     </owl:Class>
     
@@ -60892,7 +61016,22 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:label>Breast</rdfs:label>
         <skos:prefLabel>Breast</skos:prefLabel>
         <ICDO3>C50</ICDO3>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>ICDO3:C50</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1063728 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1063728">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000265"/>
+        <rdfs:label>Liver</rdfs:label>
+        <skos:prefLabel>Liver</skos:prefLabel>
+        <ICDO3>C22.0</ICDO3>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
+        <source>ICDO3:C22.0</source>
     </owl:Class>
     
 
@@ -60926,6 +61065,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Concept_code>OMOP4997892</OMOP_Concept_code>
         <OMOP_Domain_ID>Measurement</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>Cancer Modifier</OMOP_Vocabulary_ID>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>ICDO3:C18.0</source>
     </owl:Class>
     
@@ -61095,6 +61235,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:label>Lung, NOS</rdfs:label>
         <skos:prefLabel>Lung, NOS</skos:prefLabel>
         <ICDO3>C34.9</ICDO3>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>ICDO3:C34.9</source>
     </owl:Class>
     
@@ -61353,6 +61494,30 @@ The term “central gland” refers to the central zone and the transition zone 
         <SNOMEDCT>24422004</SNOMEDCT>
         <UMLS>C0205131</UMLS>
         <source>SNOMEDCT:24422004</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1000019 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1000019">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1002029"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Longitudinal</rdfs:label>
+        <skos:prefLabel>Longitudinal</skos:prefLabel>
+        <OMOP_Concept_Class_ID>Qualifier Value</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>4304309</OMOP_Concept_ID>
+        <OMOP_Concept_code>38717003</OMOP_Concept_code>
+        <OMOP_Domain_ID>Meas Value</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
+        <SNOMEDCT>38717003</SNOMEDCT>
+        <source>SNOMEDCT:38717003</source>
     </owl:Class>
     
 
@@ -62176,6 +62341,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
         <SNOMEDCT>423493009</SNOMEDCT>
         <UMLS>C1828181</UMLS>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>SNOMEDCT:423493009</source>
     </owl:Class>
     
@@ -62804,6 +62970,7 @@ The term “central gland” refers to the central zone and the transition zone 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1000177">
         <owl:equivalentClass rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001370"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000175"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001396"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
@@ -62821,6 +62988,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Concept_code>248152002</OMOP_Concept_code>
         <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>GENDER:F</source>
         <source>LOINC: LA3-6</source>
     </owl:Class>
@@ -62833,6 +63001,7 @@ The term “central gland” refers to the central zone and the transition zone 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1000180">
         <owl:equivalentClass rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001366"/>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000175"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001396"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
@@ -62850,6 +63019,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Concept_code>248153007</OMOP_Concept_code>
         <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>SNOMEDCT</OMOP_Vocabulary_ID>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>GENDER:M</source>
         <source>LOINC:LA2-8</source>
     </owl:Class>
@@ -66105,6 +66275,7 @@ https://build.fhir.org/ig/HL7/fhir-mCODE-ig/StructureDefinition-mcode-cancer-pat
         <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
         <SNOMEDCT>261665006</SNOMEDCT>
         <UMLS>C0439673</UMLS>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>SNOMEDCT:261665006</source>
     </owl:Class>
     
@@ -71799,6 +71970,32 @@ Source:DICOM</rdfs:comment>
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1002627 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1002627">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001056"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000043"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Cohort study</rdfs:label>
+        <skos:altLabel>Cohort</skos:altLabel>
+        <skos:prefLabel>Cohort study</skos:prefLabel>
+        <OMOP_Concept_Class_ID>Qualifier Value</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>44813056</OMOP_Concept_ID>
+        <OMOP_Concept_code>719581000000108</OMOP_Concept_code>
+        <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
+        <SNOMEDCT>719581000000108</SNOMEDCT>
+        <source>SNOMEDCT:719581000000108</source>
+    </owl:Class>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#COM1002646 -->
 
 
@@ -72655,10 +72852,10 @@ Source:DICOM</rdfs:comment>
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COR1000001">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment>This module defines the OMOP domain and FHIR resourceType for syntactic integration.</rdfs:comment>
-        <rdfs:label xml:lang="en">Correspondence Module</rdfs:label>
-        <skos:prefLabel xml:lang="en">Correspondence Module</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000001"/>
+        <rdfs:comment>This category defines the OMOP domain and FHIR resourceType for syntactic integration.</rdfs:comment>
+        <rdfs:label xml:lang="en">Correspondence</rdfs:label>
+        <skos:prefLabel xml:lang="en">Correspondence</skos:prefLabel>
     </owl:Class>
     
 
@@ -72668,8 +72865,8 @@ Source:DICOM</rdfs:comment>
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COR1000002">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000001"/>
-        <rdfs:label>ResourceType-FHIR</rdfs:label>
-        <skos:prefLabel>ResourceType-FHIR</skos:prefLabel>
+        <rdfs:label>FHIR</rdfs:label>
+        <skos:prefLabel>FHIR</skos:prefLabel>
     </owl:Class>
     
 
@@ -72778,8 +72975,8 @@ Source:DICOM</rdfs:comment>
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COR1000037">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000001"/>
-        <rdfs:label>Domain-OMOP</rdfs:label>
-        <skos:prefLabel>Domain-OMOP</skos:prefLabel>
+        <rdfs:label>OMOP</rdfs:label>
+        <skos:prefLabel>OMOP</skos:prefLabel>
     </owl:Class>
     
 
@@ -72945,6 +73142,7 @@ Source:DICOM</rdfs:comment>
         <DICOM_Name>Manufacturer</DICOM_Name>
         <DICOM_Tag>(0008,0070)</DICOM_Tag>
         <NCIT>C25392</NCIT>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>NCIT:C25392</source>
         <source>birnlex_12832</source>
     </owl:Class>
@@ -73042,6 +73240,7 @@ Source:DICOM</rdfs:comment>
         <RadLex>RID28840</RadLex>
         <SNOMEDCT>371575001</SNOMEDCT>
         <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
+        <source>SNOMEDCT:371575001</source>
     </owl:Class>
     
 
@@ -73298,12 +73497,14 @@ Source:DICOM</rdfs:comment>
         <skos:altLabel>Ultrasound imaging</skos:altLabel>
         <skos:altLabel>Ultrasound imaging - action (qualifier value)</skos:altLabel>
         <skos:altLabel>Ultrasound technique</skos:altLabel>
+        <skos:exactMatch>RadLex:RID10326</skos:exactMatch>
         <skos:prefLabel>Ultrasound imaging - action</skos:prefLabel>
         <OMOP_Concept_Class_ID>Qualifier Value</OMOP_Concept_Class_ID>
         <OMOP_Concept_ID>4081836</OMOP_Concept_ID>
         <OMOP_Concept_code>278292003</OMOP_Concept_code>
         <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
         <SNOMEDCT>278292003</SNOMEDCT>
+        <queryCriteria>true</queryCriteria>
         <source>SNOMEDCT:278292003</source>
     </owl:Class>
     
@@ -73480,7 +73681,6 @@ Source:DICOM</rdfs:comment>
         <skos:definition>High frequency sound, generally with a frequency greater than 20,000 Hz. [NCIT]</skos:definition>
         <skos:definition>The visualization of deep structures of the body by recording the reflections of echoes of pulses of ultrasonic waves directed into the tissues. Use of ultrasound for imaging or diagnostic purposes employs frequencies ranging from 1.6 to 10 megahertz. [MeSH]</skos:definition>
         <skos:exactMatch>NCIT:C64384</skos:exactMatch>
-        <skos:exactMatch>RADLEX:RID10326</skos:exactMatch>
         <skos:exactMatch>SNOMEDCT:16310003</skos:exactMatch>
         <skos:exactMatch>UMLS:C0041618</skos:exactMatch>
         <skos:exactMatch>UMLS:C0175676</skos:exactMatch>
@@ -73556,6 +73756,7 @@ Source:DICOM</rdfs:comment>
         <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
         <RadLex>RID10321</RadLex>
         <SNOMEDCT>312251004</SNOMEDCT>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>SNOMEDCT:312251004</source>
     </owl:Class>
     
@@ -73597,7 +73798,8 @@ Source:DICOM</rdfs:comment>
         <skos:altLabel>Siemens Medical Solutions</skos:altLabel>
         <skos:exactMatch>birnlex_3066</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Siemens</skos:prefLabel>
-        <source>Metadata Catalog</source>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
+        <source>birnlex_3066</source>
     </owl:Class>
     
 
@@ -73612,6 +73814,7 @@ Source:DICOM</rdfs:comment>
         <skos:altLabel>Toshiba Medical Systems</skos:altLabel>
         <skos:exactMatch>birnlex_3067</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Toshiba</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73627,6 +73830,7 @@ Source:DICOM</rdfs:comment>
         <skos:altLabel>Philips Medical Systems</skos:altLabel>
         <skos:exactMatch>birnlex_3065</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Philips</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
         <source>birnlex_3065</source>
     </owl:Class>
@@ -73645,6 +73849,7 @@ Source:DICOM</rdfs:comment>
         <skos:exactMatch>birnlex_12833</skos:exactMatch>
         <skos:prefLabel xml:lang="en">General Electric</skos:prefLabel>
         <acronym>GE</acronym>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
         <source>birnlex_12833</source>
     </owl:Class>
@@ -73658,6 +73863,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">I.M.S</rdfs:label>
         <skos:prefLabel xml:lang="en">I.M.S</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73670,6 +73876,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">Esaote</rdfs:label>
         <skos:prefLabel xml:lang="en">Esaote</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73682,6 +73889,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">Canon</rdfs:label>
         <skos:prefLabel xml:lang="en">Canon</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73694,6 +73902,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">Agfa</rdfs:label>
         <skos:prefLabel xml:lang="en">Agfa</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73706,6 +73915,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">ADAC</rdfs:label>
         <skos:prefLabel xml:lang="en">ADAC</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73718,6 +73928,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">Marconi</rdfs:label>
         <skos:prefLabel xml:lang="en">Marconi</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73730,6 +73941,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">Shimadzu</rdfs:label>
         <skos:prefLabel xml:lang="en">Shimadzu</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73742,6 +73954,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">Elscint</rdfs:label>
         <skos:prefLabel xml:lang="en">Elscint</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73754,6 +73967,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">Mediso</rdfs:label>
         <skos:prefLabel xml:lang="en">Mediso</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73769,6 +73983,7 @@ Source:DICOM</rdfs:comment>
         <skos:altLabel>Hitachi Medical Systems</skos:altLabel>
         <skos:exactMatch>birnlex_3064</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Hitachi</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73781,6 +73996,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">MiE</rdfs:label>
         <skos:prefLabel xml:lang="en">MiE</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73793,6 +74009,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">Picker International</rdfs:label>
         <skos:prefLabel xml:lang="en">Picker International</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73805,6 +74022,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1000010"/>
         <rdfs:label xml:lang="en">Fujifilm</rdfs:label>
         <skos:prefLabel xml:lang="en">Fujifilm</skos:prefLabel>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>Metadata Catalog</source>
     </owl:Class>
     
@@ -73826,6 +74044,7 @@ Source:DICOM</rdfs:comment>
         <skos:altLabel>SPET - Single photon emission computed tomography</skos:altLabel>
         <skos:altLabel>Single photon emission computed tomography</skos:altLabel>
         <skos:altLabel>Single photon emission computed tomography - action (qualifier value)</skos:altLabel>
+        <skos:exactMatch>RadLex:RID10334</skos:exactMatch>
         <skos:prefLabel>Single photon emission computed tomography - action</skos:prefLabel>
         <OMOP_Concept_Class_ID>Qualifier Value</OMOP_Concept_Class_ID>
         <OMOP_Concept_ID>4125403</OMOP_Concept_ID>
@@ -73833,6 +74052,7 @@ Source:DICOM</rdfs:comment>
         <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
         <SNOMEDCT>260222006</SNOMEDCT>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>SNOMEDCT:260222006</source>
     </owl:Class>
     
@@ -73857,6 +74077,7 @@ Source:DICOM</rdfs:comment>
         <OMOP_Vocabulary_ID>SNOMED</OMOP_Vocabulary_ID>
         <RadLex>RID10337</RadLex>
         <SNOMEDCT>363678002</SNOMEDCT>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>SNOMEDCT:363678002</source>
     </owl:Class>
     
@@ -74078,6 +74299,7 @@ Source:DICOM</rdfs:comment>
         <skos:altLabel>mammo</skos:altLabel>
         <skos:prefLabel>Mammography</skos:prefLabel>
         <RadLex>RID10357</RadLex>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
         <source>RadLex:RID10357</source>
     </owl:Class>
     
@@ -77779,6 +78001,176 @@ Source:DICOM</rdfs:comment>
         <SemanticType>Finding</SemanticType>
         <UMLS>C0700329</UMLS>
         <source>http://purl.bioontology.org/ontology/SNMI/M</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000001 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000001">
+        <rdfs:label>Specific Module</rdfs:label>
+        <skos:prefLabel>Specific Module</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC10000011 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC10000011">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000009"/>
+        <rdfs:label>Tier 1C+</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000002 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000001"/>
+        <rdfs:label>Collection method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000003 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000003">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
+        <rdfs:label>Only-Image</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000004 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000004">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
+        <rdfs:label>Patient-based</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000005 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000005">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
+        <rdfs:label>Case-control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000006 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000006">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
+        <rdfs:label>Longitudinal cohort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000007 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000007">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
+        <rdfs:label>Disease-specific</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000008 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000008">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000001"/>
+        <rdfs:label>Interoperability level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000009 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000009">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000008"/>
+        <rdfs:label>Tier 1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000010 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000010">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000008"/>
+        <rdfs:label>Tier 3</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000011 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000011">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000008"/>
+        <rdfs:label>Tier 2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000012 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000012">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000009"/>
+        <rdfs:label>Tier 1A+</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000013 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000013">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000011"/>
+        <rdfs:label>Tier 2C+</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000014 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000014">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000011"/>
+        <rdfs:label>Tier 2A+</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000015 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000015">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000010"/>
+        <rdfs:label>Tier 3C+</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#SPEC1000016 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000016">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000010"/>
+        <rdfs:label>Tier 3A+</rdfs:label>
     </owl:Class>
     
 
