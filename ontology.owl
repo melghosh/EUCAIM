@@ -640,7 +640,9 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     <!-- https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Tumor_Stage -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Tumor_Stage"/>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Tumor_Stage">
+        <skos:prefLabel xml:lang="en">Has_Associated_Tumor_Stage</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
@@ -1073,6 +1075,16 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 
     <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasBodySite">
         <skos:prefLabel xml:lang="en">hasBodySite</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasCondition -->
+
+
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasCondition">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1007977"/>
+        <skos:prefLabel xml:lang="en">hasCondition</skos:prefLabel>
     </owl:ObjectProperty>
     
 

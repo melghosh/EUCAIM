@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://cancerimage.eu/ontology/EUCAIM#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://cancerimage.eu/ontology/EUCAIM#","name":"EUCAIM's Hyper-Ontology", "headline":"Document describing the ontology https://cancerimage.eu/ontology/EUCAIM#", "dateReleased":"Wed Apr 02 14:34:38 CEST 2025", "version":"1.3", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"LIMICS"}], "contributor":[{"@type":"Person","name":"APHP"},{"@type":"Person","name":"CHAIMELEON"},{"@type":"Person","name":"DKFZ"},{"@type":"Person","name":"EuCanImage"},{"@type":"Person","name":"FORTH"},{"@type":"Person","name":"GUMed"},{"@type":"Person","name":"INCISIVE"},{"@type":"Person","name":"ProCAncer-I"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://cancerimage.eu/ontology/EUCAIM#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://cancerimage.eu/ontology/EUCAIM#","name":"EUCAIM's Hyper-Ontology", "headline":"Document describing the ontology https://cancerimage.eu/ontology/EUCAIM#", "dateReleased":"Wed Apr 02 15:50:53 CEST 2025", "version":"1.3", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"LIMICS"}], "contributor":[{"@type":"Person","name":"APHP"},{"@type":"Person","name":"CHAIMELEON"},{"@type":"Person","name":"DKFZ"},{"@type":"Person","name":"EuCanImage"},{"@type":"Person","name":"FORTH"},{"@type":"Person","name":"GUMed"},{"@type":"Person","name":"INCISIVE"},{"@type":"Person","name":"ProCAncer-I"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -43634,6 +43634,8 @@ Source:DICOM</span>
          <dd>
             <a href="#Has_related_condition"
                title="https://cancerimage.eu/ontology/EUCAIM#Has_related_condition">Has related condition</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasCondition"
+               title="https://cancerimage.eu/ontology/EUCAIM#hasCondition">hasCondition</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -68515,6 +68517,10 @@ Source:DICOM</span>
          <a href="#Has_Value" title="https://cancerimage.eu/ontology/EUCAIM#Has_Value">Has Value</a>
       </li>
       <li>
+         <a href="#Has_Associated_Tumor_Stage"
+            title="https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Tumor_Stage">Has_Associated_Tumor_Stage</a>
+      </li>
+      <li>
          <a href="#hasAgeAtDiagnosis"
             title="https://cancerimage.eu/ontology/EUCAIM#hasAgeAtDiagnosis">hasAgeAtDiagnosis</a>
       </li>
@@ -68525,6 +68531,10 @@ Source:DICOM</span>
       <li>
          <a href="#hasBodySite"
             title="https://cancerimage.eu/ontology/EUCAIM#hasBodySite">hasBodySite</a>
+      </li>
+      <li>
+         <a href="#hasCondition"
+            title="https://cancerimage.eu/ontology/EUCAIM#hasCondition">hasCondition</a>
       </li>
       <li>
          <a href="#hasEquipmentManufacturer"
@@ -69382,6 +69392,14 @@ Source:DICOM</span>
          </dl>
       </div>
    </div>
+   <div class="entity" id="Has_Associated_Tumor_Stage">
+      <h3>Has_Associated_Tumor_Stage<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Tumor_Stage</p>
+   </div>
    <div class="entity" id="hasAgeAtDiagnosis">
       <h3>hasAgeAtDiagnosis<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -69422,6 +69440,24 @@ Source:DICOM</span>
                <a href="#HasFindingSite"
                   title="https://cancerimage.eu/ontology/EUCAIM#HasFindingSite">Has finding site</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCondition">
+      <h3>hasCondition<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://cancerimage.eu/ontology/EUCAIM#hasCondition</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CLIN1007977"
+                  title="https://cancerimage.eu/ontology/EUCAIM#CLIN1007977">Malignant neoplastic disease</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
