@@ -296,18 +296,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "GeneVariantMutationFor" .
 
 
-###  https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit
-:HasMeasurementUnit rdf:type owl:ObjectProperty ;
-                    owl:inverseOf :UnitFor ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Has Measurement Unit" .
-
-
-###  https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite
-:HasProcedureSite rdf:type owl:ObjectProperty ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Has procedure site" ;
-                  :source "SNOMEDCT" .
-
-
 ###  https://cancerimage.eu/ontology/EUCAIM#Has_Associated
 :Has_Associated rdf:type owl:ObjectProperty ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Has Associated" .
@@ -324,11 +312,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 :Has_Associated_Primary_Condition rdf:type owl:ObjectProperty ;
                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "HasAssociatedPrimaryCondition" ;
                                   :source "Experts" .
-
-
-###  https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Race
-:Has_Associated_Race rdf:type owl:ObjectProperty ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Has Race" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Response
@@ -355,11 +338,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 ###  https://cancerimage.eu/ontology/EUCAIM#Has_Diagnostic_Value
 :Has_Diagnostic_Value rdf:type owl:ObjectProperty ;
                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Has Diagnostic Value" .
-
-
-###  https://cancerimage.eu/ontology/EUCAIM#Has_Gender
-:Has_Gender rdf:type owl:ObjectProperty ;
-            <http://www.w3.org/2004/02/skos/core#prefLabel> "Has Gender" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#Has_Location
@@ -566,6 +544,7 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 
 ###  https://cancerimage.eu/ontology/EUCAIM#UnitFor
 :UnitFor rdf:type owl:ObjectProperty ;
+         owl:inverseOf :hasMeasurementUnit ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit for measuring" .
 
 
@@ -624,6 +603,11 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
              <http://www.w3.org/2004/02/skos/core#prefLabel> "hasBodySite"@en .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#hasCauseOfDeath
+:hasCauseOfDeath rdf:type owl:ObjectProperty ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "hasCauseOfDeath" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#hasComorbidity
 :hasComorbidity rdf:type owl:ObjectProperty ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "hasComorbidity" .
@@ -640,6 +624,12 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "hasCorrespondence" .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#hasDiagnosticCategory
+:hasDiagnosticCategory rdf:type owl:ObjectProperty ;
+                       rdfs:range :COM1001084 ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "hasDiagnosticCategory" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#hasDirectProcedureSite
 :hasDirectProcedureSite rdf:type owl:ObjectProperty ;
                         rdfs:range :BP1000024 ;
@@ -653,6 +643,12 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "hasEquipmentManufacturer"@en .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#hasEthnicity
+:hasEthnicity rdf:type owl:ObjectProperty ;
+              rdfs:range :COM1001058 ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "hasEthnicity" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#hasFindingSite
 :hasFindingSite rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasBodySite ;
@@ -661,10 +657,10 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
                 :source "SNOMED CT" .
 
 
-###  https://cancerimage.eu/ontology/EUCAIM#hasGroupName
-:hasGroupName rdf:type owl:ObjectProperty ;
-              rdfs:range :COM1001084 ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "hasGroupName" .
+###  https://cancerimage.eu/ontology/EUCAIM#hasGender
+:hasGender rdf:type owl:ObjectProperty ;
+           rdfs:range :COM1000175 ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "hasGender" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#hasHistology
@@ -716,9 +712,26 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
              <http://www.w3.org/2004/02/skos/core#prefLabel> "hasLocation"@en .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit
+:hasMeasurementUnit rdf:type owl:ObjectProperty ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "hasMeasurementUnit" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#hasPathologyConfirmation
 :hasPathologyConfirmation rdf:type owl:ObjectProperty ;
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "hasPathologyConfirmation"@en .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite
+:hasProcedureSite rdf:type owl:ObjectProperty ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "hasProcedureSite" ;
+                  :source "SNOMEDCT" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#hasRace
+:hasRace rdf:type owl:ObjectProperty ;
+         rdfs:range :COM1001200 ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "hasRace" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#hasRadiationModality
@@ -837,18 +850,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 #    Data properties
 #################################################################
 
-###  https://cancerimage.eu/ontology/EUCAIM#ageHigh
-:ageHigh rdf:type owl:DatatypeProperty ;
-         rdfs:range xsd:int ;
-         <http://www.w3.org/2004/02/skos/core#prefLabel> "ageHigh" .
-
-
-###  https://cancerimage.eu/ontology/EUCAIM#ageLow
-:ageLow rdf:type owl:DatatypeProperty ;
-        rdfs:range xsd:int ;
-        <http://www.w3.org/2004/02/skos/core#prefLabel> "ageLow" .
-
-
 ###  https://cancerimage.eu/ontology/EUCAIM#endDate
 :endDate rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:dateTime ;
@@ -860,9 +861,30 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
                  rdfs:range xsd:dateTime .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#hasBirthDate
+:hasBirthDate rdf:type owl:DatatypeProperty ;
+              rdfs:domain :COM1001047 ;
+              rdfs:range xsd:dateTime ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "hasBirthDate" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#hasBirthYear
 :hasBirthYear rdf:type owl:DatatypeProperty ;
               rdfs:domain :COM1001047 .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#hasDateOfLastContact
+:hasDateOfLastContact rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :COM1001047 ;
+                      rdfs:range xsd:dateTime ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "hasDateOfLastContact" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#hasDeceased
+:hasDeceased rdf:type owl:DatatypeProperty ;
+             rdfs:domain :COM1001047 ;
+             rdfs:range xsd:boolean ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "hasDeceased" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#hasImageAcquisitionDate
@@ -870,8 +892,21 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
                          rdfs:range xsd:dateTime .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#hasManagingOrganizationIdentifier
+:hasManagingOrganizationIdentifier rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:string ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "hasManagingOrganizationIdentifier" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#hasOnsetAge
+:hasOnsetAge rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:int ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "hasOnsetAge" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#hasPatientIdentifier
 :hasPatientIdentifier rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :COM1001047 ;
                       rdfs:range rdfs:Literal ,
                                  xsd:string .
 
@@ -885,12 +920,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 :nbrOfStudies rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:int ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "nbrOfStudies" .
-
-
-###  https://cancerimage.eu/ontology/EUCAIM#nbrOfSubjects
-:nbrOfSubjects rdf:type owl:DatatypeProperty ;
-               rdfs:range xsd:int ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "nbrOfSubjects" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#performedDateTime
@@ -10264,22 +10293,6 @@ The term “central gland” refers to the central zone and the transition zone 
                              :CLIN1009138 ,
                              :CLIN1012788 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasMeasurementUnit ;
-                               owl:someValuesFrom :COM1000156
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasMeasurementUnit ;
-                               owl:someValuesFrom :COM1000161
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasMeasurementUnit ;
-                               owl:someValuesFrom :COM1000167
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasMeasurementUnit ;
-                               owl:someValuesFrom :COM1000174
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :LabTestFor ;
                                owl:someValuesFrom :CLIN1000075
                              ] ,
@@ -10290,6 +10303,22 @@ The term “central gland” refers to the central zone and the transition zone 
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000050
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMeasurementUnit ;
+                               owl:someValuesFrom :COM1000156
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMeasurementUnit ;
+                               owl:someValuesFrom :COM1000161
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMeasurementUnit ;
+                               owl:someValuesFrom :COM1000167
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMeasurementUnit ;
+                               owl:someValuesFrom :COM1000174
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasSubject ;
@@ -10331,12 +10360,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1000228 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1000005 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000214
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000214
                              ] ;
              rdfs:label "Procedure on organ" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C1292895" ;
@@ -10356,12 +10385,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1000230 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1000228 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000002
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000002
                              ] ;
              rdfs:label "Procedure on trunk" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C1292875" ;
@@ -10382,16 +10411,16 @@ The term “central gland” refers to the central zone and the transition zone 
              rdfs:subClassOf :CLIN1000228 ,
                              :CLIN1000230 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
+                               owl:onProperty :hasCorrespondence ;
+                               owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
                                owl:someValuesFrom :BP1000094
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
+                               owl:onProperty :hasProcedureSite ;
                                owl:someValuesFrom :BP1000173
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasCorrespondence ;
-                               owl:someValuesFrom :COR1000088
                              ] ;
              rdfs:label "Procedure on abdomen" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C1292877" ;
@@ -10411,12 +10440,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1000237 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1000233 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000173
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000173
                              ] ;
              rdfs:label "Operation on abdominal region" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C0198482" ;
@@ -11472,6 +11501,36 @@ The term “central gland” refers to the central zone and the transition zone 
              :OMOP_Domain_ID "Measurement" ;
              :OMOP_Vocabulary_ID "CancerModifier" ;
              :source "CancerModifier:c-AJCC/UICC-T3" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#CLIN1001366
+:CLIN1001366 rdf:type owl:Class ;
+             rdfs:subClassOf :CLIN1038792 ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCorrespondence ;
+                               owl:someValuesFrom :COR1000025
+                             ] ;
+             rdfs:label "Male (finding)" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Male (finding)" ;
+             :CDM "FHIR" ;
+             :FHIR_ResourceType "Observation" ;
+             :SNOMEDCT "248153007" ;
+             :source "SNOMEDCT:248153007" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#CLIN1001370
+:CLIN1001370 rdf:type owl:Class ;
+             rdfs:subClassOf :CLIN1038792 ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCorrespondence ;
+                               owl:someValuesFrom :COR1000025
+                             ] ;
+             rdfs:label "Female (finding)" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Female (finding)" ;
+             :CDM "FHIR" ;
+             :FHIR_ResourceType "Observation" ;
+             :SNOMEDCT "248152002" ;
+             :source "SNOMEDCT:248152002" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#CLIN1001403
@@ -12741,7 +12800,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#CLIN1004580
 :CLIN1004580 rdf:type owl:Class ;
-             rdfs:subClassOf :CLIN1037297 ,
+             rdfs:subClassOf :CLIN1037292 ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000050
@@ -14618,12 +14677,12 @@ The term “central gland” refers to the central zone and the transition zone 
                              :CLIN1011703 ,
                              :CLIN1012162 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000021
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000021
                              ] ;
              rdfs:label "Procedure on prostate" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C1293019" ;
@@ -14643,12 +14702,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1011105 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1000230 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000057
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000057
                              ] ;
              rdfs:label "Procedure on genitourinary system" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C1292863" ;
@@ -14690,12 +14749,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1011402 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1000228 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000179
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000179
                              ] ;
              rdfs:label "Procedure on large intestine" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C0869808" ;
@@ -14716,12 +14775,12 @@ The term “central gland” refers to the central zone and the transition zone 
              rdfs:subClassOf :CLIN1011402 ,
                              :CLIN1012162 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000130
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000130
                              ] ;
              rdfs:label "Procedure on rectum" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C0869814" ;
@@ -14742,12 +14801,12 @@ The term “central gland” refers to the central zone and the transition zone 
              rdfs:subClassOf :CLIN1000228 ,
                              :CLIN1011253 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000193
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000193
                              ] ;
              rdfs:label "Procedure on male genital organ" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C1306474" ;
@@ -14788,12 +14847,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1012008 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1000230 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000062
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000062
                              ] ;
              rdfs:label "Procedure on pelvic region of trunk" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C3661975" ;
@@ -14813,12 +14872,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1012162 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1012008 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000092
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000092
                              ] ;
              rdfs:label "Procedure on pelvis" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Procedure on pelvis" ;
@@ -14836,12 +14895,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1012317 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1012162 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000092
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000092
                              ] ;
              rdfs:label "Operative procedure on pelvis" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Operative procedure on pelvis" ;
@@ -14859,12 +14918,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1012473 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1010958 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000021
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000021
                              ] ;
              rdfs:label "Operation on prostate" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C0194790" ;
@@ -17197,12 +17256,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1019638 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1000003 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasMeasurementUnit ;
-                               owl:someValuesFrom :COM1000152
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000050
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMeasurementUnit ;
+                               owl:someValuesFrom :COM1000152
                              ] ;
              rdfs:label "Lesion size" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C0449453" ;
@@ -21309,12 +21368,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1030900 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1050478 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasMeasurementUnit ;
-                               owl:someValuesFrom :COM1000148
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000050
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMeasurementUnit ;
+                               owl:someValuesFrom :COM1000148
                              ] ;
              rdfs:label "Tumor volume" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Tumor volume (observable entity)" ,
@@ -23012,11 +23071,14 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#CLIN1033405
 :CLIN1033405 rdf:type owl:Class ;
-             rdfs:subClassOf :CLIN1000005 ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasCorrespondence ;
-                               owl:someValuesFrom :COR1000088
-                             ] ;
+             owl:equivalentClass [ owl:intersectionOf ( :CLIN1000005
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasCorrespondence ;
+                                                          owl:someValuesFrom :COR1000088
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:label "Laboratory procedure" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Laboratory procedure" ;
              :OMOP_Concept_Class_ID "Procedure" ;
@@ -24739,12 +24801,12 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1034704 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1000230 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000126
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000126
                              ] ;
              rdfs:label "Procedure on thorax" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C1292876" ;
@@ -24817,12 +24879,12 @@ The term “central gland” refers to the central zone and the transition zone 
              rdfs:subClassOf :CLIN1000003 ,
                              :CLIN1034929 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasMeasurementUnit ;
-                               owl:someValuesFrom :COM1000147
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000050
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMeasurementUnit ;
+                               owl:someValuesFrom :COM1000147
                              ] ;
              rdfs:label "Length dimension of neoplasm" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Size of tumor" ,
@@ -25115,16 +25177,16 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1035083 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1034175 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasProcedureSite ;
-                               owl:someValuesFrom :BP1000202
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000025
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000088
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasProcedureSite ;
+                               owl:someValuesFrom :BP1000202
                              ] ;
              rdfs:label "Procedure on lymph node" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Procedure on lymph node (procedure)" ;
@@ -28633,6 +28695,13 @@ The term “central gland” refers to the central zone and the transition zone 
              :source "SNOMEDCT:262525000" .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#CLIN1037292
+:CLIN1037292 rdf:type owl:Class ;
+             rdfs:subClassOf :CLIN1037297 ;
+             rdfs:label "Health Status Assessment" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Health Status Assessment" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#CLIN1037293
 :CLIN1037293 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1037296 ,
@@ -29771,7 +29840,11 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#CLIN1040046
 :CLIN1040046 rdf:type owl:Class ;
-             rdfs:subClassOf :CLIN1040047 ;
+             rdfs:subClassOf :CLIN1040047 ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAnswer ;
+                               owl:someValuesFrom :COM1001058
+                             ] ;
              rdfs:label "Ethnic group" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Race or ethnicity" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Ethnic group" ;
@@ -32685,7 +32758,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#CLIN1047413
 :CLIN1047413 rdf:type owl:Class ;
-             rdfs:subClassOf :CLIN1037297 ,
+             rdfs:subClassOf :CLIN1037292 ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000050
@@ -32711,11 +32784,12 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#CLIN1047414
 :CLIN1047414 rdf:type owl:Class ;
-             rdfs:subClassOf :CLIN1037297 ;
+             rdfs:subClassOf :CLIN1037292 ;
              rdfs:label "American Society of Anesthesiologists physical status classification" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "ASA - American Society of Anaesthesiologists physical status classification" ,
                                                             "ASA - American Society of Anesthesiologists physical status classification" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "American Society of Anesthesiologists physical status classification" ;
+             :LOINC "97816-3" ;
              :OMOP_Concept_Class_ID "Staging / Scales" ;
              :OMOP_Concept_ID 4159411 ;
              :OMOP_Concept_code 273270000 ;
@@ -32727,7 +32801,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#CLIN1047415
 :CLIN1047415 rdf:type owl:Class ;
-             rdfs:subClassOf :CLIN1037297 ;
+             rdfs:subClassOf :CLIN1037292 ;
              rdfs:label "Karnofsky performance status" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Karnofsky performance status (assessment scale)" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Karnofsky performance status" ;
@@ -37893,16 +37967,16 @@ The term “central gland” refers to the central zone and the transition zone 
 :CLIN1050897 rdf:type owl:Class ;
              rdfs:subClassOf :CLIN1050886 ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :HasMeasurementUnit ;
-                               owl:someValuesFrom :COM1001950
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000023
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasCorrespondence ;
                                owl:someValuesFrom :COR1000050
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMeasurementUnit ;
+                               owl:someValuesFrom :COM1001950
                              ] ;
              rdfs:label "Delivered radiation dose" ;
              <http://www.w3.org/2004/02/skos/core#exactMatch> "UMLS:C1299361" ;
@@ -51454,7 +51528,7 @@ The term “central gland” refers to the central zone and the transition zone 
 :COM1000141 rdf:type owl:Class ;
             rdfs:subClassOf :COM1000144 ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :HasMeasurementUnit ;
+                              owl:onProperty :hasMeasurementUnit ;
                               owl:someValuesFrom :COM1001957
                             ] ;
             rdfs:label "CT Imaging Acquisition Protocol Element CTDI VOL" ;
@@ -51492,7 +51566,7 @@ The term “central gland” refers to the central zone and the transition zone 
 :COM1000144 rdf:type owl:Class ;
             rdfs:subClassOf :IMG1016633 ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :HasMeasurementUnit ;
+                              owl:onProperty :hasMeasurementUnit ;
                               owl:someValuesFrom :COM1001950
                             ] ;
             rdfs:label "Computed Tomography Dose Index Volume" ;
@@ -51892,6 +51966,20 @@ The term “central gland” refers to the central zone and the transition zone 
             :source "UCUM:ng/dL" .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#COM1000173
+:COM1000173 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1000175 ;
+            rdfs:label "Non Binary" ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Gender Identity: Non Binary" ,
+                                                           "Non-binary" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Non Binary" ;
+            :OMOP_Concept_Class_ID "Answer" ;
+            :OMOP_Concept_ID "1585841" ;
+            :OMOP_Concept_code "GenderIdentity_NonBinary" ;
+            :OMOP_Domain_ID "Observation" ;
+            :OMOP_Vocabulary_ID "PPI" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1000174
 :COM1000174 rdf:type owl:Class ;
             rdfs:subClassOf :COM1000147 ,
@@ -51939,50 +52027,45 @@ The term “central gland” refers to the central zone and the transition zone 
             :source "SNOMEDCT:263495000" .
 
 
-###  https://cancerimage.eu/ontology/EUCAIM#COM1000177
-:COM1000177 rdf:type owl:Class ;
-            rdfs:subClassOf :COM1000175 ,
-                            :COM1001396 ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasCorrespondence ;
-                              owl:someValuesFrom :COR1000043
-                            ] ;
-            rdfs:label "Female" ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "F" ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> "NAACCR:220@2" ;
-            <http://www.w3.org/2004/02/skos/core#prefLabel> "Female" ;
-            :LOINC "LA3-6" ;
-            :OMOP_Concept_Class_ID "Answer" ;
-            :OMOP_Concept_ID "45878463" ;
-            :OMOP_Concept_Name "Female" ;
-            :OMOP_Concept_code "LA3-6" ;
-            :OMOP_Domain_ID "Meas Value" ;
-            :OMOP_Vocabulary_ID "LOINC" ;
-            :queryCriteria "true"^^xsd:boolean ;
-            :source "LOINC: LA3-6" .
+###  https://cancerimage.eu/ontology/EUCAIM#COM1000176
+:COM1000176 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1000175 ;
+            rdfs:label "MALE" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "MALE" ;
+            :GENDER "M" ;
+            :OMOP_Concept_Class_ID "Gender" ;
+            :OMOP_Concept_ID "8507" ;
+            :OMOP_Concept_code "M" ;
+            :OMOP_Domain_ID "Gender" ;
+            :OMOP_Vocabulary_ID "Gender" ;
+            :source "Gender:M" .
 
 
-###  https://cancerimage.eu/ontology/EUCAIM#COM1000180
-:COM1000180 rdf:type owl:Class ;
-            rdfs:subClassOf :COM1000175 ,
-                            :COM1001396 ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasCorrespondence ;
-                              owl:someValuesFrom :COR1000043
-                            ] ;
-            rdfs:label "Male" ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "M" ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> "NAACCR:220@1" ;
-            <http://www.w3.org/2004/02/skos/core#prefLabel> "Male" ;
-            :LOINC "LA2-8" ;
+###  https://cancerimage.eu/ontology/EUCAIM#COM1000178
+:COM1000178 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1000175 ;
+            rdfs:label "FEMALE" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "FEMALE" ;
+            :GENDER "F" ;
+            :OMOP_Concept_Class_ID "Gender" ;
+            :OMOP_Concept_ID "8532" ;
+            :OMOP_Concept_code "F" ;
+            :OMOP_Domain_ID "Gender" ;
+            :OMOP_Vocabulary_ID "Gender" ;
+            :source "Gender:F" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#COM1000179
+:COM1000179 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1000175 ;
+            rdfs:label "Transgender" ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Gender Identity: Transgender" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Transgender" ;
             :OMOP_Concept_Class_ID "Answer" ;
-            :OMOP_Concept_ID "45880669" ;
-            :OMOP_Concept_Name "Male" ;
-            :OMOP_Concept_code "LA2-8" ;
-            :OMOP_Domain_ID "Meas Value" ;
-            :OMOP_Vocabulary_ID "LOINC" ;
-            :queryCriteria "true"^^xsd:boolean ;
-            :source "LOINC:LA2-8" .
+            :OMOP_Concept_ID "1585842" ;
+            :OMOP_Concept_code "GenderIdentity_Transgender" ;
+            :OMOP_Domain_ID "Observation" ;
+            :OMOP_Vocabulary_ID "PPI" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1000181
@@ -53730,7 +53813,7 @@ The term “central gland” refers to the central zone and the transition zone 
                               owl:someValuesFrom :COR1000043
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :hasGroupName ;
+                              owl:onProperty :hasDiagnosticCategory ;
                               owl:someValuesFrom :COM1001084
                             ] ,
                             [ rdf:type owl:Restriction ;
@@ -53809,10 +53892,6 @@ The term “central gland” refers to the central zone and the transition zone 
 :COM1001051 rdf:type owl:Class ;
             rdfs:subClassOf :COM1001047 ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :Has_Gender ;
-                              owl:someValuesFrom :COM1000175
-                            ] ,
-                            [ rdf:type owl:Restriction ;
                               owl:onProperty :Has_condition ;
                               owl:someValuesFrom :CLIN1007977
                             ] ,
@@ -53839,6 +53918,10 @@ The term “central gland” refers to the central zone and the transition zone 
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasCorrespondence ;
                               owl:someValuesFrom :COR1000027
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasGender ;
+                              owl:someValuesFrom :COM1000175
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasUndergone ;
@@ -54900,6 +54983,95 @@ The term “central gland” refers to the central zone and the transition zone 
             :source "SNOMEDCT:1229917000" .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#COM1001200
+:COM1001200 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1001056 ;
+            rdfs:label "Race" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Race" ;
+            :LOINC "32624-9" ;
+            :OMOP_Concept_ID "3046853" ;
+            :OMOP_Concept_code "32624-9" ;
+            :OMOP_Domain_ID "Observation" ;
+            :OMOP_Vocabulary_ID "LOINC" ;
+            :source "LOINC:32624-9" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#COM1001205
+:COM1001205 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1001206 ;
+            rdfs:label "Latino" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Latino" ;
+            :OMOP_Concept_Class_ID "Answer" ;
+            :OMOP_Concept_ID "45883615" ;
+            :OMOP_Concept_code "LA16816-3" ;
+            :OMOP_Domain_ID "Meas Value" ;
+            :OMOP_Vocabulary_ID "LOINC" ;
+            :source "LOINC:LA16816-3" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#COM1001206
+:COM1001206 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1001058 ;
+            rdfs:label "Hispanic or Latino" ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> "LOINC:LA31368-6" ,
+                                                             "LOINC:LA6214-6" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Hispanic or Latino" ;
+            :LOINC "LA31368-6" ,
+                   "LA6214-6" ;
+            :OMOP_Concept_Class_ID "Ethnicity" ;
+            :OMOP_Concept_ID "38003563" ;
+            :OMOP_Concept_code "Hispanic" ;
+            :OMOP_Domain_ID "Ethnicity" ;
+            :OMOP_Vocabulary_ID "Ethnicity" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#COM1001207
+:COM1001207 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1001058 ;
+            rdfs:label "Not Hispanic or Latino" ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Non-Hispanic or Latino" ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> "LOINC:LA10597-5" ,
+                                                             "LOINC:LA19555-4" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Not Hispanic or Latino" ;
+            :LOINC "LA10597-5" ,
+                   "LA19555-4" ;
+            :OMOP_Concept_Class_ID "Ethnicity" ;
+            :OMOP_Concept_ID "38003564" ;
+            :OMOP_Concept_code "Not Hispanic" ;
+            :OMOP_Domain_ID "Ethnicity" ;
+            :OMOP_Vocabulary_ID "Ethnicity" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#COM1001208
+:COM1001208 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1001058 ;
+            rdfs:label "Other Hispanic/Latino/Spanish" ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> "NAACCR:191@6" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Other Hispanic/Latino/Spanish" ;
+            :LOINC "LA10603-1" ;
+            :NAACCR "191@6" ;
+            :OMOP_Concept_Class_ID "Answer" ;
+            :OMOP_Concept_ID "45882063" ;
+            :OMOP_Concept_code "LA10603-1" ;
+            :OMOP_Domain_ID "Meas Value" ;
+            :OMOP_Vocabulary_ID "LOINC" ;
+            :source "LOINC:LA10603-1" .
+
+
+###  https://cancerimage.eu/ontology/EUCAIM#COM1001209
+:COM1001209 rdf:type owl:Class ;
+            rdfs:subClassOf :COM1001206 ;
+            rdfs:label "Hispanic" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Hispanic" ;
+            :LOINC "LA7-7" ;
+            :OMOP_Concept_Class_ID "Answer" ;
+            :OMOP_Concept_ID "45876999" ;
+            :OMOP_Concept_code "LA7-7" ;
+            :OMOP_Domain_ID "Meas Value" ;
+            :OMOP_Vocabulary_ID "LOINC" ;
+            :source "LOINC:LA7-7" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1001215
 :COM1001215 rdf:type owl:Class ;
             rdfs:subClassOf :COM1000208 ;
@@ -55023,7 +55195,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1001311
 :COM1001311 rdf:type owl:Class ;
-            rdfs:subClassOf :COM1001058 ,
+            rdfs:subClassOf :COM1001200 ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasCorrespondence ;
                               owl:someValuesFrom :COR1000058
@@ -55149,7 +55321,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1001320
 :COM1001320 rdf:type owl:Class ;
-            rdfs:subClassOf :COM1001058 ;
+            rdfs:subClassOf :COM1001200 ;
             rdfs:label "Asian" ;
             <http://www.w3.org/2004/02/skos/core#exactMatch> "LOINC:LA6156-9" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Asian" ;
@@ -55164,7 +55336,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1001321
 :COM1001321 rdf:type owl:Class ;
-            rdfs:subClassOf :COM1001058 ;
+            rdfs:subClassOf :COM1001200 ;
             rdfs:label "Black or African American" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Black or African American" ;
             :OMOP_Concept_ID "8516" ;
@@ -55764,17 +55936,24 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1001366
 :COM1001366 rdf:type owl:Class ;
-            rdfs:subClassOf :CLIN1038792 ,
+            rdfs:subClassOf :COM1001396 ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasCorrespondence ;
-                              owl:someValuesFrom :COR1000025
+                              owl:someValuesFrom :COR1000043
                             ] ;
-            rdfs:label "Male (finding)" ;
-            <http://www.w3.org/2004/02/skos/core#prefLabel> "Male (finding)" ;
-            :CDM "FHIR" ;
-            :FHIR_ResourceType "Observation" ;
-            :SNOMEDCT "248153007" ;
-            :source "SNOMEDCT:248153007" .
+            rdfs:label "Male" ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "M" ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> "NAACCR:220@1" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Male" ;
+            :LOINC "LA2-8" ;
+            :OMOP_Concept_Class_ID "Answer" ;
+            :OMOP_Concept_ID "45880669" ;
+            :OMOP_Concept_Name "Male" ;
+            :OMOP_Concept_code "LA2-8" ;
+            :OMOP_Domain_ID "Meas Value" ;
+            :OMOP_Vocabulary_ID "LOINC" ;
+            :queryCriteria "true"^^xsd:boolean ;
+            :source "LOINC:LA2-8" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1001367
@@ -55851,17 +56030,24 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1001370
 :COM1001370 rdf:type owl:Class ;
-            rdfs:subClassOf :CLIN1038792 ,
+            rdfs:subClassOf :COM1001396 ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasCorrespondence ;
-                              owl:someValuesFrom :COR1000025
+                              owl:someValuesFrom :COR1000043
                             ] ;
-            rdfs:label "Female (finding)" ;
-            <http://www.w3.org/2004/02/skos/core#prefLabel> "Female (finding)" ;
-            :CDM "FHIR" ;
-            :FHIR_ResourceType "Observation" ;
-            :SNOMEDCT "248152002" ;
-            :source "SNOMEDCT:248152002" .
+            rdfs:label "Female" ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "F" ;
+            <http://www.w3.org/2004/02/skos/core#exactMatch> "NAACCR:220@2" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Female" ;
+            :LOINC "LA3-6" ;
+            :OMOP_Concept_Class_ID "Answer" ;
+            :OMOP_Concept_ID "45878463" ;
+            :OMOP_Concept_Name "Female" ;
+            :OMOP_Concept_code "LA3-6" ;
+            :OMOP_Domain_ID "Meas Value" ;
+            :OMOP_Vocabulary_ID "LOINC" ;
+            :queryCriteria "true"^^xsd:boolean ;
+            :source "LOINC: LA3-6" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1001371
@@ -64241,7 +64427,7 @@ Source:DICOM""" ;
 :IMG1016612 rdf:type owl:Class ;
             rdfs:subClassOf :IMG1016611 ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :HasMeasurementUnit ;
+                              owl:onProperty :hasMeasurementUnit ;
                               owl:someValuesFrom :COM1001951
                             ] ;
             rdfs:label "Effective dose" ;
@@ -64318,7 +64504,7 @@ Source:DICOM""" ;
 :IMG1016636 rdf:type owl:Class ;
             rdfs:subClassOf :IMG1016635 ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :HasMeasurementUnit ;
+                              owl:onProperty :hasMeasurementUnit ;
                               owl:someValuesFrom :COM1001957
                             ] ;
             rdfs:label "dose area product" ;
@@ -64335,7 +64521,7 @@ Source:DICOM""" ;
 :IMG1016637 rdf:type owl:Class ;
             rdfs:subClassOf :IMG1016635 ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :HasMeasurementUnit ;
+                              owl:onProperty :hasMeasurementUnit ;
                               owl:someValuesFrom :COM1001950
                             ] ;
             rdfs:label "KERMA area product" ;
@@ -64885,31 +65071,36 @@ Source:DICOM""" ;
 ###  https://cancerimage.eu/ontology/EUCAIM#SPEC1000003
 :SPEC1000003 rdf:type owl:Class ;
              rdfs:subClassOf :SPEC1000002 ;
-             rdfs:label "Only image" .
+             rdfs:label "Only-Image" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Only-Image" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#SPEC1000004
 :SPEC1000004 rdf:type owl:Class ;
              rdfs:subClassOf :SPEC1000002 ;
-             rdfs:label "Patient based" .
+             rdfs:label "Patient-based" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#SPEC1000005
 :SPEC1000005 rdf:type owl:Class ;
              rdfs:subClassOf :SPEC1000002 ;
-             rdfs:label "Case control" .
+             rdfs:label "Case-control" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Case-control" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#SPEC1000006
 :SPEC1000006 rdf:type owl:Class ;
              rdfs:subClassOf :SPEC1000002 ;
-             rdfs:label "Longitudinal cohort" .
+             rdfs:label "Longitudinal" ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Longitudinal cohort" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Longitudinal" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#SPEC1000007
 :SPEC1000007 rdf:type owl:Class ;
              rdfs:subClassOf :SPEC1000002 ;
-             rdfs:label "Disease specific" .
+             rdfs:label "Disease-specific" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Disease-specific" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#SPEC1000008

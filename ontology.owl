@@ -505,26 +505,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
-    <!-- https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit -->
-
-
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit">
-        <owl:inverseOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#UnitFor"/>
-        <skos:prefLabel>Has Measurement Unit</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite -->
-
-
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite">
-        <skos:prefLabel>Has procedure site</skos:prefLabel>
-        <source>SNOMEDCT</source>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://cancerimage.eu/ontology/EUCAIM#Has_Associated -->
 
 
@@ -551,15 +531,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Primary_Condition">
         <skos:prefLabel>HasAssociatedPrimaryCondition</skos:prefLabel>
         <source>Experts</source>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Race -->
-
-
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#Has_Associated_Race">
-        <skos:prefLabel>Has Race</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -606,15 +577,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 
     <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#Has_Diagnostic_Value">
         <skos:prefLabel>Has Diagnostic Value</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://cancerimage.eu/ontology/EUCAIM#Has_Gender -->
-
-
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#Has_Gender">
-        <skos:prefLabel>Has Gender</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -965,6 +927,7 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
 
 
     <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#UnitFor">
+        <owl:inverseOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
         <skos:prefLabel>Unit for measuring</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -1061,6 +1024,15 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasCauseOfDeath -->
+
+
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasCauseOfDeath">
+        <skos:prefLabel>hasCauseOfDeath</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasComorbidity -->
 
 
@@ -1089,6 +1061,16 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasDiagnosticCategory -->
+
+
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasDiagnosticCategory">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001084"/>
+        <skos:prefLabel>hasDiagnosticCategory</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasDirectProcedureSite -->
 
 
@@ -1110,6 +1092,16 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasEthnicity -->
+
+
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasEthnicity">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001058"/>
+        <skos:prefLabel>hasEthnicity</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasFindingSite -->
 
 
@@ -1122,12 +1114,12 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
-    <!-- https://cancerimage.eu/ontology/EUCAIM#hasGroupName -->
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasGender -->
 
 
-    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasGroupName">
-        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001084"/>
-        <skos:prefLabel>hasGroupName</skos:prefLabel>
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasGender">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000175"/>
+        <skos:prefLabel>hasGender</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1213,11 +1205,40 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit">
+        <skos:prefLabel>hasMeasurementUnit</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasPathologyConfirmation -->
 
 
     <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasPathologyConfirmation">
         <skos:prefLabel xml:lang="en">hasPathologyConfirmation</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite -->
+
+
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite">
+        <skos:prefLabel>hasProcedureSite</skos:prefLabel>
+        <source>SNOMEDCT</source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasRace -->
+
+
+    <owl:ObjectProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasRace">
+        <rdfs:range rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001200"/>
+        <skos:prefLabel>hasRace</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1421,26 +1442,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
-    <!-- https://cancerimage.eu/ontology/EUCAIM#ageHigh -->
-
-
-    <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#ageHigh">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <skos:prefLabel>ageHigh</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://cancerimage.eu/ontology/EUCAIM#ageLow -->
-
-
-    <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#ageLow">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <skos:prefLabel>ageLow</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://cancerimage.eu/ontology/EUCAIM#endDate -->
 
 
@@ -1460,11 +1461,44 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasBirthDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasBirthDate">
+        <rdfs:domain rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001047"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <skos:prefLabel>hasBirthDate</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasBirthYear -->
 
 
     <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasBirthYear">
         <rdfs:domain rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001047"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasDateOfLastContact -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasDateOfLastContact">
+        <rdfs:domain rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001047"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <skos:prefLabel>hasDateOfLastContact</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasDeceased -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasDeceased">
+        <rdfs:domain rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001047"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <skos:prefLabel>hasDeceased</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -1478,10 +1512,31 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasManagingOrganizationIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasManagingOrganizationIdentifier">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:prefLabel>hasManagingOrganizationIdentifier</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#hasOnsetAge -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasOnsetAge">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <skos:prefLabel>hasOnsetAge</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#hasPatientIdentifier -->
 
 
     <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#hasPatientIdentifier">
+        <rdfs:domain rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001047"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -1503,16 +1558,6 @@ Seven main cancer types are covered in the Hyper-Ontology: prostate, breast, col
     <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#nbrOfStudies">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <skos:prefLabel>nbrOfStudies</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://cancerimage.eu/ontology/EUCAIM#nbrOfSubjects -->
-
-
-    <owl:DatatypeProperty rdf:about="https://cancerimage.eu/ontology/EUCAIM#nbrOfSubjects">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <skos:prefLabel>nbrOfSubjects</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -13233,30 +13278,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1012788"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000156"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000161"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000167"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000174"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#LabTestFor"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000075"/>
             </owl:Restriction>
@@ -13271,6 +13292,30 @@ The term “central gland” refers to the central zone and the transition zone 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000050"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000156"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000161"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000167"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000174"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -13320,14 +13365,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000005"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000214"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000214"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on organ</rdfs:label>
@@ -13353,14 +13398,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000228"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000002"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on trunk</rdfs:label>
@@ -13387,20 +13432,20 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000230"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000094"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000173"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on abdomen</rdfs:label>
@@ -13426,14 +13471,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000233"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000173"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000173"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Operation on abdominal region</rdfs:label>
@@ -14800,6 +14845,48 @@ The term “central gland” refers to the central zone and the transition zone 
         <OMOP_Domain_ID>Measurement</OMOP_Domain_ID>
         <OMOP_Vocabulary_ID>CancerModifier</OMOP_Vocabulary_ID>
         <source>CancerModifier:c-AJCC/UICC-T3</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1001366 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1001366">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1038792"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Male (finding)</rdfs:label>
+        <skos:prefLabel>Male (finding)</skos:prefLabel>
+        <CDM>FHIR</CDM>
+        <FHIR_ResourceType>Observation</FHIR_ResourceType>
+        <SNOMEDCT>248153007</SNOMEDCT>
+        <source>SNOMEDCT:248153007</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1001370 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1001370">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1038792"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Female (finding)</rdfs:label>
+        <skos:prefLabel>Female (finding)</skos:prefLabel>
+        <CDM>FHIR</CDM>
+        <FHIR_ResourceType>Observation</FHIR_ResourceType>
+        <SNOMEDCT>248152002</SNOMEDCT>
+        <source>SNOMEDCT:248152002</source>
     </owl:Class>
     
 
@@ -16435,7 +16522,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1004580">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1037297"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1037292"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
@@ -18906,14 +18993,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1012162"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000021"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000021"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on prostate</rdfs:label>
@@ -18939,14 +19026,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000230"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000057"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000057"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on genitourinary system</rdfs:label>
@@ -19000,14 +19087,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000228"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000179"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000179"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on large intestine</rdfs:label>
@@ -19034,14 +19121,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1012162"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000130"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000130"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on rectum</rdfs:label>
@@ -19068,14 +19155,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1011253"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000193"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000193"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on male genital organ</rdfs:label>
@@ -19128,14 +19215,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000230"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000062"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000062"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on pelvic region of trunk</rdfs:label>
@@ -19161,14 +19248,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1012008"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000092"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000092"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on pelvis</rdfs:label>
@@ -19192,14 +19279,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1012162"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000092"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000092"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Operative procedure on pelvis</rdfs:label>
@@ -19223,14 +19310,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1010958"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000021"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000021"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Operation on prostate</rdfs:label>
@@ -22256,14 +22343,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000152"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000050"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000050"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000152"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Lesion size</rdfs:label>
@@ -27515,14 +27602,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1050478"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000148"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000050"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000050"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000148"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Tumor volume</rdfs:label>
@@ -29729,13 +29816,17 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1033405">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000005"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1000005"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                        <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:label>Laboratory procedure</rdfs:label>
         <skos:prefLabel>Laboratory procedure</skos:prefLabel>
         <OMOP_Concept_Class_ID>Procedure</OMOP_Concept_Class_ID>
@@ -31950,14 +32041,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1000230"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000126"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000126"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on thorax</rdfs:label>
@@ -32050,14 +32141,14 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1034929"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000147"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000050"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000050"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000147"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Length dimension of neoplasm</rdfs:label>
@@ -32426,12 +32517,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1034175"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasProcedureSite"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000202"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000025"/>
             </owl:Restriction>
@@ -32440,6 +32525,12 @@ The term “central gland” refers to the central zone and the transition zone 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000088"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#BP1000202"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Procedure on lymph node</rdfs:label>
@@ -36891,6 +36982,17 @@ The term “central gland” refers to the central zone and the transition zone 
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1037292 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1037292">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1037297"/>
+        <rdfs:label>Health Status Assessment</rdfs:label>
+        <skos:prefLabel>Health Status Assessment</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#CLIN1037293 -->
 
 
@@ -38378,6 +38480,12 @@ The term “central gland” refers to the central zone and the transition zone 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1040046">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1040047"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasAnswer"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>Ethnic group</rdfs:label>
         <skos:altLabel>Race or ethnicity</skos:altLabel>
         <skos:prefLabel>Ethnic group</skos:prefLabel>
@@ -42144,7 +42252,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1047413">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1037297"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1037292"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
@@ -42176,11 +42284,12 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1047414">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1037297"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1037292"/>
         <rdfs:label>American Society of Anesthesiologists physical status classification</rdfs:label>
         <skos:altLabel>ASA - American Society of Anaesthesiologists physical status classification</skos:altLabel>
         <skos:altLabel>ASA - American Society of Anesthesiologists physical status classification</skos:altLabel>
         <skos:prefLabel>American Society of Anesthesiologists physical status classification</skos:prefLabel>
+        <LOINC>97816-3</LOINC>
         <OMOP_Concept_Class_ID>Staging / Scales</OMOP_Concept_Class_ID>
         <OMOP_Concept_ID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4159411</OMOP_Concept_ID>
         <OMOP_Concept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">273270000</OMOP_Concept_code>
@@ -42196,7 +42305,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#CLIN1047415">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1037297"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1037292"/>
         <rdfs:label>Karnofsky performance status</rdfs:label>
         <skos:altLabel>Karnofsky performance status (assessment scale)</skos:altLabel>
         <skos:prefLabel>Karnofsky performance status</skos:prefLabel>
@@ -48893,12 +49002,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1050886"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001950"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000023"/>
             </owl:Restriction>
@@ -48907,6 +49010,12 @@ The term “central gland” refers to the central zone and the transition zone 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000050"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001950"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Delivered radiation dose</rdfs:label>
@@ -66720,7 +66829,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000144"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001957"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -66772,7 +66881,7 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1016633"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001950"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -67283,6 +67392,24 @@ The term “central gland” refers to the central zone and the transition zone 
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1000173 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1000173">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000175"/>
+        <rdfs:label>Non Binary</rdfs:label>
+        <skos:altLabel>Gender Identity: Non Binary</skos:altLabel>
+        <skos:altLabel>Non-binary</skos:altLabel>
+        <skos:prefLabel>Non Binary</skos:prefLabel>
+        <OMOP_Concept_Class_ID>Answer</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>1585841</OMOP_Concept_ID>
+        <OMOP_Concept_code>GenderIdentity_NonBinary</OMOP_Concept_code>
+        <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>PPI</OMOP_Vocabulary_ID>
+    </owl:Class>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#COM1000174 -->
 
 
@@ -67344,60 +67471,55 @@ The term “central gland” refers to the central zone and the transition zone 
     
 
 
-    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1000177 -->
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1000176 -->
 
 
-    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1000177">
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1000176">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000175"/>
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001396"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000043"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Female</rdfs:label>
-        <skos:altLabel>F</skos:altLabel>
-        <skos:exactMatch>NAACCR:220@2</skos:exactMatch>
-        <skos:prefLabel>Female</skos:prefLabel>
-        <LOINC>LA3-6</LOINC>
-        <OMOP_Concept_Class_ID>Answer</OMOP_Concept_Class_ID>
-        <OMOP_Concept_ID>45878463</OMOP_Concept_ID>
-        <OMOP_Concept_Name>Female</OMOP_Concept_Name>
-        <OMOP_Concept_code>LA3-6</OMOP_Concept_code>
-        <OMOP_Domain_ID>Meas Value</OMOP_Domain_ID>
-        <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
-        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
-        <source>LOINC: LA3-6</source>
+        <rdfs:label>MALE</rdfs:label>
+        <skos:prefLabel>MALE</skos:prefLabel>
+        <GENDER>M</GENDER>
+        <OMOP_Concept_Class_ID>Gender</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>8507</OMOP_Concept_ID>
+        <OMOP_Concept_code>M</OMOP_Concept_code>
+        <OMOP_Domain_ID>Gender</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>Gender</OMOP_Vocabulary_ID>
+        <source>Gender:M</source>
     </owl:Class>
     
 
 
-    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1000180 -->
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1000178 -->
 
 
-    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1000180">
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1000178">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000175"/>
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001396"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000043"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Male</rdfs:label>
-        <skos:altLabel>M</skos:altLabel>
-        <skos:exactMatch>NAACCR:220@1</skos:exactMatch>
-        <skos:prefLabel>Male</skos:prefLabel>
-        <LOINC>LA2-8</LOINC>
+        <rdfs:label>FEMALE</rdfs:label>
+        <skos:prefLabel>FEMALE</skos:prefLabel>
+        <GENDER>F</GENDER>
+        <OMOP_Concept_Class_ID>Gender</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>8532</OMOP_Concept_ID>
+        <OMOP_Concept_code>F</OMOP_Concept_code>
+        <OMOP_Domain_ID>Gender</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>Gender</OMOP_Vocabulary_ID>
+        <source>Gender:F</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1000179 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1000179">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000175"/>
+        <rdfs:label>Transgender</rdfs:label>
+        <skos:altLabel>Gender Identity: Transgender</skos:altLabel>
+        <skos:prefLabel>Transgender</skos:prefLabel>
         <OMOP_Concept_Class_ID>Answer</OMOP_Concept_Class_ID>
-        <OMOP_Concept_ID>45880669</OMOP_Concept_ID>
-        <OMOP_Concept_Name>Male</OMOP_Concept_Name>
-        <OMOP_Concept_code>LA2-8</OMOP_Concept_code>
-        <OMOP_Domain_ID>Meas Value</OMOP_Domain_ID>
-        <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
-        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
-        <source>LOINC:LA2-8</source>
+        <OMOP_Concept_ID>1585842</OMOP_Concept_ID>
+        <OMOP_Concept_code>GenderIdentity_Transgender</OMOP_Concept_code>
+        <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>PPI</OMOP_Vocabulary_ID>
     </owl:Class>
     
 
@@ -69608,7 +69730,7 @@ The term “central gland” refers to the central zone and the transition zone 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasGroupName"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasDiagnosticCategory"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001084"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -69707,12 +69829,6 @@ The term “central gland” refers to the central zone and the transition zone 
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001047"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#Has_Gender"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000175"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#Has_condition"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1007977"/>
             </owl:Restriction>
@@ -69751,6 +69867,12 @@ The term “central gland” refers to the central zone and the transition zone 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasGender"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1000175"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -71151,6 +71273,119 @@ The term “central gland” refers to the central zone and the transition zone 
     
 
 
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1001200 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001200">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001056"/>
+        <rdfs:label>Race</rdfs:label>
+        <skos:prefLabel>Race</skos:prefLabel>
+        <LOINC>32624-9</LOINC>
+        <OMOP_Concept_ID>3046853</OMOP_Concept_ID>
+        <OMOP_Concept_code>32624-9</OMOP_Concept_code>
+        <OMOP_Domain_ID>Observation</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
+        <source>LOINC:32624-9</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1001205 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001205">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001206"/>
+        <rdfs:label>Latino</rdfs:label>
+        <skos:prefLabel>Latino</skos:prefLabel>
+        <OMOP_Concept_Class_ID>Answer</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>45883615</OMOP_Concept_ID>
+        <OMOP_Concept_code>LA16816-3</OMOP_Concept_code>
+        <OMOP_Domain_ID>Meas Value</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
+        <source>LOINC:LA16816-3</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1001206 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001206">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001058"/>
+        <rdfs:label>Hispanic or Latino</rdfs:label>
+        <skos:exactMatch>LOINC:LA31368-6</skos:exactMatch>
+        <skos:exactMatch>LOINC:LA6214-6</skos:exactMatch>
+        <skos:prefLabel>Hispanic or Latino</skos:prefLabel>
+        <LOINC>LA31368-6</LOINC>
+        <LOINC>LA6214-6</LOINC>
+        <OMOP_Concept_Class_ID>Ethnicity</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>38003563</OMOP_Concept_ID>
+        <OMOP_Concept_code>Hispanic</OMOP_Concept_code>
+        <OMOP_Domain_ID>Ethnicity</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>Ethnicity</OMOP_Vocabulary_ID>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1001207 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001207">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001058"/>
+        <rdfs:label>Not Hispanic or Latino</rdfs:label>
+        <skos:altLabel>Non-Hispanic or Latino</skos:altLabel>
+        <skos:exactMatch>LOINC:LA10597-5</skos:exactMatch>
+        <skos:exactMatch>LOINC:LA19555-4</skos:exactMatch>
+        <skos:prefLabel>Not Hispanic or Latino</skos:prefLabel>
+        <LOINC>LA10597-5</LOINC>
+        <LOINC>LA19555-4</LOINC>
+        <OMOP_Concept_Class_ID>Ethnicity</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>38003564</OMOP_Concept_ID>
+        <OMOP_Concept_code>Not Hispanic</OMOP_Concept_code>
+        <OMOP_Domain_ID>Ethnicity</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>Ethnicity</OMOP_Vocabulary_ID>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1001208 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001208">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001058"/>
+        <rdfs:label>Other Hispanic/Latino/Spanish</rdfs:label>
+        <skos:exactMatch>NAACCR:191@6</skos:exactMatch>
+        <skos:prefLabel>Other Hispanic/Latino/Spanish</skos:prefLabel>
+        <LOINC>LA10603-1</LOINC>
+        <NAACCR>191@6</NAACCR>
+        <OMOP_Concept_Class_ID>Answer</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>45882063</OMOP_Concept_ID>
+        <OMOP_Concept_code>LA10603-1</OMOP_Concept_code>
+        <OMOP_Domain_ID>Meas Value</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
+        <source>LOINC:LA10603-1</source>
+    </owl:Class>
+    
+
+
+    <!-- https://cancerimage.eu/ontology/EUCAIM#COM1001209 -->
+
+
+    <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001209">
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001206"/>
+        <rdfs:label>Hispanic</rdfs:label>
+        <skos:prefLabel>Hispanic</skos:prefLabel>
+        <LOINC>LA7-7</LOINC>
+        <OMOP_Concept_Class_ID>Answer</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>45876999</OMOP_Concept_ID>
+        <OMOP_Concept_code>LA7-7</OMOP_Concept_code>
+        <OMOP_Domain_ID>Meas Value</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
+        <source>LOINC:LA7-7</source>
+    </owl:Class>
+    
+
+
     <!-- https://cancerimage.eu/ontology/EUCAIM#COM1001215 -->
 
 
@@ -71314,7 +71549,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001311">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001058"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001200"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
@@ -71484,7 +71719,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001320">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001058"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001200"/>
         <rdfs:label>Asian</rdfs:label>
         <skos:exactMatch>LOINC:LA6156-9</skos:exactMatch>
         <skos:prefLabel>Asian</skos:prefLabel>
@@ -71503,7 +71738,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001321">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001058"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001200"/>
         <rdfs:label>Black or African American</rdfs:label>
         <skos:prefLabel>Black or African American</skos:prefLabel>
         <OMOP_Concept_ID>8516</OMOP_Concept_ID>
@@ -72271,19 +72506,26 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001366">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1038792"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001396"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000025"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>Male (finding)</rdfs:label>
-        <skos:prefLabel>Male (finding)</skos:prefLabel>
-        <CDM>FHIR</CDM>
-        <FHIR_ResourceType>Observation</FHIR_ResourceType>
-        <SNOMEDCT>248153007</SNOMEDCT>
-        <source>SNOMEDCT:248153007</source>
+        <rdfs:label>Male</rdfs:label>
+        <skos:altLabel>M</skos:altLabel>
+        <skos:exactMatch>NAACCR:220@1</skos:exactMatch>
+        <skos:prefLabel>Male</skos:prefLabel>
+        <LOINC>LA2-8</LOINC>
+        <OMOP_Concept_Class_ID>Answer</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>45880669</OMOP_Concept_ID>
+        <OMOP_Concept_Name>Male</OMOP_Concept_Name>
+        <OMOP_Concept_code>LA2-8</OMOP_Concept_code>
+        <OMOP_Domain_ID>Meas Value</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
+        <source>LOINC:LA2-8</source>
     </owl:Class>
     
 
@@ -72382,19 +72624,26 @@ The term “central gland” refers to the central zone and the transition zone 
 
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#COM1001370">
-        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#CLIN1038792"/>
+        <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001396"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasCorrespondence"/>
-                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000025"/>
+                <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COR1000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>Female (finding)</rdfs:label>
-        <skos:prefLabel>Female (finding)</skos:prefLabel>
-        <CDM>FHIR</CDM>
-        <FHIR_ResourceType>Observation</FHIR_ResourceType>
-        <SNOMEDCT>248152002</SNOMEDCT>
-        <source>SNOMEDCT:248152002</source>
+        <rdfs:label>Female</rdfs:label>
+        <skos:altLabel>F</skos:altLabel>
+        <skos:exactMatch>NAACCR:220@2</skos:exactMatch>
+        <skos:prefLabel>Female</skos:prefLabel>
+        <LOINC>LA3-6</LOINC>
+        <OMOP_Concept_Class_ID>Answer</OMOP_Concept_Class_ID>
+        <OMOP_Concept_ID>45878463</OMOP_Concept_ID>
+        <OMOP_Concept_Name>Female</OMOP_Concept_Name>
+        <OMOP_Concept_code>LA3-6</OMOP_Concept_code>
+        <OMOP_Domain_ID>Meas Value</OMOP_Domain_ID>
+        <OMOP_Vocabulary_ID>LOINC</OMOP_Vocabulary_ID>
+        <queryCriteria rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</queryCriteria>
+        <source>LOINC: LA3-6</source>
     </owl:Class>
     
 
@@ -83261,7 +83510,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1016611"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001951"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -83372,7 +83621,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1016635"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001957"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -83395,7 +83644,7 @@ Source:DICOM</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#IMG1016635"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#HasMeasurementUnit"/>
+                <owl:onProperty rdf:resource="https://cancerimage.eu/ontology/EUCAIM#hasMeasurementUnit"/>
                 <owl:someValuesFrom rdf:resource="https://cancerimage.eu/ontology/EUCAIM#COM1001950"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -84132,7 +84381,8 @@ Source:DICOM</rdfs:comment>
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000003">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
-        <rdfs:label>Only image</rdfs:label>
+        <rdfs:label>Only-Image</rdfs:label>
+        <skos:prefLabel>Only-Image</skos:prefLabel>
     </owl:Class>
     
 
@@ -84142,7 +84392,7 @@ Source:DICOM</rdfs:comment>
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000004">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
-        <rdfs:label>Patient based</rdfs:label>
+        <rdfs:label>Patient-based</rdfs:label>
     </owl:Class>
     
 
@@ -84152,7 +84402,8 @@ Source:DICOM</rdfs:comment>
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000005">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
-        <rdfs:label>Case control</rdfs:label>
+        <rdfs:label>Case-control</rdfs:label>
+        <skos:prefLabel>Case-control</skos:prefLabel>
     </owl:Class>
     
 
@@ -84162,7 +84413,9 @@ Source:DICOM</rdfs:comment>
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000006">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
-        <rdfs:label>Longitudinal cohort</rdfs:label>
+        <rdfs:label>Longitudinal</rdfs:label>
+        <skos:altLabel>Longitudinal cohort</skos:altLabel>
+        <skos:prefLabel>Longitudinal</skos:prefLabel>
     </owl:Class>
     
 
@@ -84172,7 +84425,8 @@ Source:DICOM</rdfs:comment>
 
     <owl:Class rdf:about="https://cancerimage.eu/ontology/EUCAIM#SPEC1000007">
         <rdfs:subClassOf rdf:resource="https://cancerimage.eu/ontology/EUCAIM#SPEC1000002"/>
-        <rdfs:label>Disease specific</rdfs:label>
+        <rdfs:label>Disease-specific</rdfs:label>
+        <skos:prefLabel>Disease-specific</skos:prefLabel>
     </owl:Class>
     
 
