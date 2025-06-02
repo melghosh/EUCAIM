@@ -25,7 +25,7 @@
 This effort is part of the EUCAM project 
 (https://cancerimage.eu/)""" ;
                                            <http://purl.org/dc/elements/1.1/title> "EUCAIM's Hyper-Ontology" ;
-                                           <http://purl.org/dc/terms/bibliographicCitation> "Laboratory of Medical Informatics and Knowledge Engineering in e-Health (LIMICS). (2025). EUCAIM's Hyper-Ontology_V1.3. Zenodo. https://doi.org/10.5281/zenodo.14765570"@en ;
+                                           <http://purl.org/dc/terms/bibliographicCitation> "Laboratory of Medical Informatics and Knowledge Engineering in e-Health (LIMICS). (2025). EUCAIM's Hyper-Ontology_V1.3. Zenodo. https://doi.org/10.5281/zenodo.10777925."@en ;
                                            <http://purl.org/dc/terms/date> "May, 2025"@en ;
                                            rdfs:comment """EUCAIM's Hyper-Ontology is a well-founded layered and modular domain and domain-application ontology that defines the essentials of oncology and radiology.
 
@@ -496,6 +496,8 @@ Various cancer types are covered in the Hyper-Ontology, including prostate, brea
 
 ###  https://cancerimage.eu/ontology/EUCAIM#SurgicallyTreats
 :SurgicallyTreats rdf:type owl:ObjectProperty ;
+                  rdfs:domain :CLIN1004413 ;
+                  rdfs:range :CLIN1007977 ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Surgically treats" .
 
 
@@ -854,11 +856,13 @@ Various cancer types are covered in the Hyper-Ontology, including prostate, brea
 
 ###  https://cancerimage.eu/ontology/EUCAIM#hasRadiationModality
 :hasRadiationModality rdf:type owl:ObjectProperty ;
+                      rdfs:range :CLIN1014933 ;
                       <http://www.w3.org/2004/02/skos/core#prefLabel> "hasRadiationModality" .
 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#hasRadiationTechnique
 :hasRadiationTechnique rdf:type owl:ObjectProperty ;
+                       rdfs:range :CLIN1014933 ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "hasRadiationTechnique" .
 
 
@@ -905,7 +909,7 @@ Various cancer types are covered in the Hyper-Ontology, including prostate, brea
 
 ###  https://cancerimage.eu/ontology/EUCAIM#hasSegmentLabel
 :hasSegmentLabel rdf:type owl:ObjectProperty ;
-                 rdfs:domain :BP1000024 ;
+                 rdfs:range :BP1000024 ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "hasSegmentLabel" .
 
 
@@ -54072,7 +54076,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1000176
 :COM1000176 rdf:type owl:Class ;
-            owl:equivalentClass :COM1001370 ;
+            owl:equivalentClass :COM1001366 ;
             rdfs:subClassOf :COM1000175 ;
             rdfs:label "MALE" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "MALE" ;
@@ -54087,7 +54091,7 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1000178
 :COM1000178 rdf:type owl:Class ;
-            owl:equivalentClass :COM1001366 ;
+            owl:equivalentClass :COM1001370 ;
             rdfs:subClassOf :COM1000175 ;
             rdfs:label "FEMALE" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "FEMALE" ;
@@ -62910,7 +62914,7 @@ Source:DICOM""" ;
 
 ###  https://cancerimage.eu/ontology/EUCAIM#COM1002626
 :COM1002626 rdf:type owl:Class ;
-            rdfs:subClassOf :COM1002624 ;
+            rdfs:subClassOf :COM1001084 ;
             rdfs:label "Negative screening" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Negative screening" .
 
