@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://cancerimage.eu/ontology/EUCAIM#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://cancerimage.eu/ontology/EUCAIM#","name":"EUCAIM's Hyper-Ontology", "headline":"Document describing the ontology https://cancerimage.eu/ontology/EUCAIM#", "dateReleased":"Mon Jun 02 15:22:10 CEST 2025", "version":"1.3", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"LIMICS"}], "contributor":[{"@type":"Person","name":"APHP"},{"@type":"Person","name":"CHAIMELEON"},{"@type":"Person","name":"DKFZ"},{"@type":"Person","name":"EuCanImage"},{"@type":"Person","name":"FORTH"},{"@type":"Person","name":"GUMed"},{"@type":"Person","name":"INCISIVE"},{"@type":"Person","name":"ProCAncer-I"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://cancerimage.eu/ontology/EUCAIM#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://cancerimage.eu/ontology/EUCAIM#","name":"EUCAIM's Hyper-Ontology", "headline":"Document describing the ontology https://cancerimage.eu/ontology/EUCAIM#", "dateReleased":"Tue Jun 03 13:56:50 CEST 2025", "version":"1.3", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"LIMICS"}], "contributor":[{"@type":"Person","name":"APHP"},{"@type":"Person","name":"CHAIMELEON"},{"@type":"Person","name":"DKFZ"},{"@type":"Person","name":"EuCanImage"},{"@type":"Person","name":"FORTH"},{"@type":"Person","name":"GUMed"},{"@type":"Person","name":"INCISIVE"},{"@type":"Person","name":"ProCAncer-I"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -61,7 +61,7 @@ $(function(){
 <dt>Latest version:</dt>
 <dd><a href="https://cancerimage.eu/ontology/EUCAIM#">https://cancerimage.eu/ontology/EUCAIM#</a></dd>
 <dt>Previous version:</dt>
-<dd><a href="1.2 (January 2025)">1.2 (January 2025)</a></dd>
+<dd><a href="https://doi.org/10.5281/zenodo.14765570">1.2 (January 2025)</a></dd>
 <dt>Revision:</dt>
 <dd>1.3</dd>
 <dt>Authors:</dt>
@@ -74,7 +74,7 @@ $(function(){
 <dd>LIMICS</dd>
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Laboratory of Medical Informatics and Knowledge Engineering in e-Health (LIMICS). (2025). EUCAIM's Hyper-Ontology_V1.3. Zenodo. https://doi.org/10.5281/zenodo.10777925.</dd>
+<dd>Laboratory of Medical Informatics and Knowledge Engineering in e-Health (LIMICS). (2025). EUCAIM's Hyper-Ontology_V1.3. Zenodo. <a href="https://doi.org/10.5281/zenodo.10777925">https://doi.org/10.5281/zenodo.10777925.</a></dd>
 </dl>
 
 <hr/>
@@ -84,6 +84,9 @@ $(function(){
 <span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"><html>
+
+
+
 <body>
 
 <h2>Objective</h2>
@@ -98,12 +101,36 @@ This work covers four main projects from the <a href="https://ai4hi.net/" target
 </center>
 
 </p>
+
+
+
 </body>
 </html></div>
 <div id="toc"></div> 
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  align: center
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
 <body>
 
 <h2>Hyper-Ontology's Specifications</h2>
@@ -112,8 +139,87 @@ This work covers four main projects from the <a href="https://ai4hi.net/" target
 The Hyper-Ontology is a <a href="https://www.go-fair.org/fair-principles/" target="_blank">FAIR</a>-compliant, well-founded layered and modular domain and domain-application ontology that defines the essentials of <b>oncology</b> and <b>radiology</b>. 
 It is developed using a hybrid iterative semantically and formally well-founded approach composed of two main strategies: bottom-up (based on the domain-specific knowledge provided by <a href="https://ai4hi.net/" target="_blank"><b>AI4HI</b></a>) and top-down (based on the <a href="https://build.fhir.org/ig/HL7/fhir-mCODE-ig/" target="_blank"><b>mCODE</b></a> specifications). 
 The Hyper-Ontology covers various cancer types, including <b>prostate</b>, <b>breast</b>, <b>colon</b>, <b>liver</b>, <b>rectum</b>, <b>lung</b>, and <b>colorectal</b>. 
-In version 1.3, new cancer types (e.g., Glioblastoma), imaging modalities (e.g., Whole Slide Imaging (WSI)), and annotation/segmentation information (mainly imaging descriptors from INCISIVE) have been included, enriching and extending the ontology content. Besides, the semantic integration with the EUCAIM CDM-v3.0 has been ensured in this version.
+In version 1.3, new cancer types (e.g., Glioblastoma), imaging modalities (e.g., Whole Slide Imaging (WSI)), and annotation/segmentation information (mainly imaging descriptors from INCISIVE) have been included, enriching and extending the ontology content (some metrics are given in the Table below). Besides, the semantic integration with the EUCAIM CDM-v3.0 has been ensured in this version.
 </p>
+
+
+<table>
+  <tr>
+    <td>Classes</td>
+    <td>3126</td>
+ 
+    <td>Object property</td>
+    <td>129</td>
+  
+    <td>Data property</td>
+    <td>30</td>
+  </tr>
+   <tr>
+    <td>Synonyms</td>
+    <td>2988</td>
+ 
+    <td>exactMatch</td>
+    <td>2203</td>
+  <td>Definitions</td>
+    <td>341</td>
+  </tr>
+  <tr>
+   <td>OMOP Mapped concepts</td>
+    <td>2523</td>
+  
+     <td>FHIR Mapped concepts</td>
+    <td>352</td>
+     <td>DICOM Mapped concepts</td>
+    <td>14</td>
+  
+   
+  </tr>
+  <tr>
+    <td>SNOMEDCT</td>
+    <td>2056</td>
+  
+    <td>ICD-O-3</td>
+    <td>204</td>
+  
+    <td>RadLex</td>
+    <td>280</td>
+  </tr>
+  <tr>
+<td>LOINC</td>
+    <td>203</td>   
+   <td>NAACCR</td>
+    <td>111</td>
+ 
+    <td>ICD-10</td>
+    <td>18</td>
+  </tr>
+   <tr>
+   <td>	UCUM</td>
+    <td>27</td>
+	<td>RxNorm</td>
+    <td>36</td>
+   <td>Race</td>
+    <td>7</td>
+   
+  </tr>
+   <tr>
+   <td>Cancer types and subtypes</td>
+    <td>222</td>
+   <td>	Imaging modalities</td>
+    <td>24</td>
+	
+    <td>Body parts</td>
+    <td>389</td>
+  </tr>
+  <tr>
+   <td>Histology/Morphology</td>
+    <td>150</td>
+  <td>Comorbidities</td>
+    <td>42</td>
+	<td>Biomarker test</td>
+    <td>77</td>
+  </tr>
+</table>
 </body>
 </html></div>
   
@@ -129,7 +235,7 @@ Five main modules are defined in the hyper-ontology:
 <ol>
   <li><b>Clinical&Biological Module</b>: includes cancer types and subtypes, histology/morphology, body part, tumor grade/stage, procedure (surgical/therapeutic), family history, medication, tumor marker tests, lab test results, genomics, etc. 
 </li>
-  <li><b>Imaging Module</b>: includes imaging procedures and modalities (e.g., MR, CT, WSI), tumor assessment (e.g., PI-RADS and BI-RADS), manufacturers, imaging descriptors (e.g., enhancement pattern, tissue composition, mass density), etc.</li>
+  <li><b>Imaging Module</b>: includes imaging procedures and modalities (e.g., MR, CT, WSI), tumor assessment (e.g., PI-RADS and BI-RADS), manufacturers, imaging descriptors (e.g., enhancement pattern, tissue composition, mass density, mass shape), etc.</li>
   <li><b>Common Module</b>: defines staging/grading values and other qualifier values such as unit of measure, time patterns, family degrees, absence and presence findings, and age at diagnosis. 
 </li>
 <li> <b>Specific Module</b>: defined to support domain-specific metadata (EUCAIM DCAT Application Profile) and syntactic mapping with OMOP and FHIR.
@@ -140,6 +246,8 @@ Five main modules are defined in the hyper-ontology:
 
 
 </p>
+
+
 
 </body>
 </html></div>
@@ -12074,6 +12182,10 @@ This section provides details for each class and property defined by EUCAIM's Hy
       <li>
          <a href="#CLIN1049103"
             title="https://cancerimage.eu/ontology/EUCAIM#CLIN1049103">Tumor configuration observable entity</a>
+      </li>
+      <li>
+         <a href="#GEN1000026"
+            title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
       </li>
       <li>
          <a href="#CLIN1049693"
@@ -29800,6 +29912,8 @@ The term “central gland” refers to the central zone and the transition zone 
          <dd>
             <a href="#IMG1000001"
                title="https://cancerimage.eu/ontology/EUCAIM#IMG1000001">Imaging Module</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GEN1000026"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -29822,6 +29936,8 @@ The term “central gland” refers to the central zone and the transition zone 
          <dd>
             <a href="#CLIN1000214"
                title="https://cancerimage.eu/ontology/EUCAIM#CLIN1000214">Morphologic Finding</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GEN1000026"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -33506,6 +33622,8 @@ The term “central gland” refers to the central zone and the transition zone 
          <dd>
             <a href="#IMG1005454"
                title="https://cancerimage.eu/ontology/EUCAIM#IMG1005454">Imaging observation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GEN1000026"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -39078,6 +39196,8 @@ The term “central gland” refers to the central zone and the transition zone 
                title="https://cancerimage.eu/ontology/EUCAIM#GEN1000016">Evidence Type</a>
             <sup class="type-c" title="class">c</sup>, <a href="#GEN1000014"
                title="https://cancerimage.eu/ontology/EUCAIM#GEN1000014">Observation Category</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GEN1000026"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -44360,6 +44480,8 @@ Source:DICOM</span>
          <dd>
             <a href="#IMG1000001"
                title="https://cancerimage.eu/ontology/EUCAIM#IMG1000001">Imaging Module</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GEN1000026"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -52813,6 +52935,8 @@ Source:DICOM</span>
          <dd>
             <a href="#IMG1005454"
                title="https://cancerimage.eu/ontology/EUCAIM#IMG1005454">Imaging observation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GEN1000026"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -60329,6 +60453,8 @@ Source:DICOM</span>
          <dd>
             <a href="#IMG1000001"
                title="https://cancerimage.eu/ontology/EUCAIM#IMG1000001">Imaging Module</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GEN1000026"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -77088,6 +77214,8 @@ Source:DICOM</span>
          <dd>
             <a href="#IMG1000001"
                title="https://cancerimage.eu/ontology/EUCAIM#IMG1000001">Imaging Module</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GEN1000026"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -78516,6 +78644,42 @@ Source:DICOM</span>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="GEN1000026">
+      <h3>Tumor Descriptor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://cancerimage.eu/ontology/EUCAIM#GEN1000026</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#GEN1000001"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000001">Generic Module</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#IMG1016690"
+               title="https://cancerimage.eu/ontology/EUCAIM#IMG1016690">Density descriptor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CLIN1000220"
+               title="https://cancerimage.eu/ontology/EUCAIM#CLIN1000220">Deposit</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IMG1005498"
+               title="https://cancerimage.eu/ontology/EUCAIM#IMG1005498">Enhancement pattern</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IMG1016608"
+               title="https://cancerimage.eu/ontology/EUCAIM#IMG1016608">Imaging observation descriptor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IMG1005439"
+               title="https://cancerimage.eu/ontology/EUCAIM#IMG1005439">Margin</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IMG1016629"
+               title="https://cancerimage.eu/ontology/EUCAIM#IMG1016629">Orientation descriptor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IMG1016681"
+               title="https://cancerimage.eu/ontology/EUCAIM#IMG1016681">Tissue composition</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IMG1016696"
+               title="https://cancerimage.eu/ontology/EUCAIM#IMG1016696">Tumor vascularity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="CLIN1049693">
       <h3>Tumor extension finding<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -79153,6 +79317,8 @@ Source:DICOM</span>
          <dd>
             <a href="#IMG1000001"
                title="https://cancerimage.eu/ontology/EUCAIM#IMG1000001">Imaging Module</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GEN1000026"
+               title="https://cancerimage.eu/ontology/EUCAIM#GEN1000026">Tumor Descriptor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>

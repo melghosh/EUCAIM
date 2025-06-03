@@ -10730,7 +10730,8 @@ The term “central gland” refers to the central zone and the transition zone 
 
 ###  https://cancerimage.eu/ontology/EUCAIM#CLIN1000220
 :CLIN1000220 rdf:type owl:Class ;
-             rdfs:subClassOf :CLIN1000214 ;
+             rdfs:subClassOf :CLIN1000214 ,
+                             :GEN1000026 ;
              rdfs:label "Deposit" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Deposit" ;
              :NCIT "C9442" ;
@@ -63958,6 +63959,13 @@ Source:DICOM""" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Social History" .
 
 
+###  https://cancerimage.eu/ontology/EUCAIM#GEN1000026
+:GEN1000026 rdf:type owl:Class ;
+            rdfs:subClassOf :GEN1000001 ;
+            rdfs:label "Tumor Descriptor" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Tumor Descriptor" .
+
+
 ###  https://cancerimage.eu/ontology/EUCAIM#IMG1000001
 :IMG1000001 rdf:type owl:Class ;
             rdfs:subClassOf owl:Thing ;
@@ -65087,7 +65095,8 @@ Source:DICOM""" ;
 
 ###  https://cancerimage.eu/ontology/EUCAIM#IMG1005439
 :IMG1005439 rdf:type owl:Class ;
-            rdfs:subClassOf :IMG1005454 ;
+            rdfs:subClassOf :GEN1000026 ,
+                            :IMG1005454 ;
             rdfs:label "Margin" ;
             <http://www.w3.org/2004/02/skos/core#definition> "BI-RADS: Mammo, MRI, US -The edge or border of the lesion. [RadLex]" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Margin" ;
@@ -65745,7 +65754,8 @@ Source:DICOM""" ;
 
 ###  https://cancerimage.eu/ontology/EUCAIM#IMG1005498
 :IMG1005498 rdf:type owl:Class ;
-            rdfs:subClassOf :IMG1005454 ;
+            rdfs:subClassOf :GEN1000026 ,
+                            :IMG1005454 ;
             rdfs:label "Enhancement pattern" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Enhancement pattern" ;
             :RadLex "RID6058" ;
@@ -67516,7 +67526,8 @@ Source:DICOM""" ;
 
 ###  https://cancerimage.eu/ontology/EUCAIM#IMG1016608
 :IMG1016608 rdf:type owl:Class ;
-            rdfs:subClassOf :IMG1000001 ;
+            rdfs:subClassOf :GEN1000026 ,
+                            :IMG1000001 ;
             rdfs:label "Imaging observation descriptor" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Imaging observation descriptor" ;
             :RadLex "RID7464" ;
@@ -67721,7 +67732,8 @@ Source:DICOM""" ;
 
 ###  https://cancerimage.eu/ontology/EUCAIM#IMG1016629
 :IMG1016629 rdf:type owl:Class ;
-            rdfs:subClassOf :IMG1000001 ;
+            rdfs:subClassOf :GEN1000026 ,
+                            :IMG1000001 ;
             rdfs:label "Orientation descriptor" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Orientation descriptor" ;
             :RadLex "RID5851" ;
@@ -68022,7 +68034,8 @@ Source:DICOM""" ;
 
 ###  https://cancerimage.eu/ontology/EUCAIM#IMG1016681
 :IMG1016681 rdf:type owl:Class ;
-            rdfs:subClassOf :IMG1000001 ;
+            rdfs:subClassOf :GEN1000026 ,
+                            :IMG1000001 ;
             rdfs:label "Tissue composition" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Tissue composition" ;
             :RadLex "RID49693" ;
@@ -68080,7 +68093,8 @@ Source:DICOM""" ;
 
 ###  https://cancerimage.eu/ontology/EUCAIM#IMG1016690
 :IMG1016690 rdf:type owl:Class ;
-            rdfs:subClassOf :IMG1000001 ;
+            rdfs:subClassOf :GEN1000026 ,
+                            :IMG1000001 ;
             rdfs:label "Density descriptor" ;
             <http://www.w3.org/2004/02/skos/core#definition> "[BI-RADS] This is used to define the x-ray attenuation of the lesion relative to the expected attenuation of an equal volume of fibroglandular breast tissue. It is important that most breast cancers that form a visible mass are of equal or higher density than an equal volume of fibroglandular tissue. it is rare (although not impossible) for breast cancer to be lower in density. breast cancers are never fat-containing (radiolucent) although they may trap fat. [RadLex]" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Density descriptor" ;
@@ -68152,7 +68166,8 @@ Source:DICOM""" ;
 
 ###  https://cancerimage.eu/ontology/EUCAIM#IMG1016696
 :IMG1016696 rdf:type owl:Class ;
-            rdfs:subClassOf :IMG1000001 ;
+            rdfs:subClassOf :GEN1000026 ,
+                            :IMG1000001 ;
             rdfs:label "Tumor vascularity" ;
             <http://www.w3.org/2004/02/skos/core#definition> "[BI-RADS] US: Must reference a contralateral normal area or unaffected site in the same breast as the basis for comparison [RadLex]" ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Tumor vascularity" ;
